@@ -160,3 +160,91 @@
 2025-11-03 01:59:40,876 - src.ui.main_window - INFO - Cerrando aplicación...
 2025-11-03 01:59:40,876 - src.database.sync_manager - INFO - Sincronización automática detenida
 2025-11-03 01:59:40,925 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 02:10:21,180 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 02:10:21,180 - __main__ - INFO - ======================================================================
+2025-11-03 02:10:21,180 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 02:10:21,180 - __main__ - INFO - ======================================================================
+2025-11-03 02:10:32,940 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 02:10:32,940 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 02:10:34,187 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 02:10:34,187 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 02:10:38,546 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-03 02:10:38,557 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 02:10:38,557 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 02:10:50,825 - src.controllers.student_controller - INFO - Clase de ejemplo creada: ID 1
+2025-11-03 02:10:50,847 - src.controllers.student_controller - INFO - Estudiante creado: Yerson Fustamante (ID: 1)
+2025-11-03 02:10:50,885 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 02:10:50,899 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 02:11:23,865 - src.controllers.student_controller - INFO - Estudiante actualizado: ID 1
+2025-11-03 02:11:23,889 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 02:11:23,908 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 02:11:36,755 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 1
+2025-11-03 02:11:36,764 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-03 02:11:36,764 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 02:11:49,418 - src.controllers.student_controller - INFO - Estudiante creado: Juan perez (ID: 2)
+2025-11-03 02:11:49,436 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 02:11:49,462 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 02:11:52,492 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 02:11:52,495 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 02:11:52,697 - src.controllers.student_controller - INFO - Búsqueda 'j': 1 resultados
+2025-11-03 02:11:53,129 - src.controllers.student_controller - INFO - Búsqueda 'ju': 1 resultados
+2025-11-03 02:11:53,786 - src.controllers.student_controller - INFO - Búsqueda 'jua': 1 resultados
+2025-11-03 02:11:53,970 - src.controllers.student_controller - INFO - Búsqueda 'juan': 1 resultados
+2025-11-03 02:11:55,113 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 02:11:55,124 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 02:11:55,668 - src.controllers.student_controller - INFO - Búsqueda 'ja': 0 resultados
+2025-11-03 02:11:55,734 - src.controllers.student_controller - INFO - Búsqueda 'jaj': 0 resultados
+2025-11-03 02:11:55,794 - src.controllers.student_controller - INFO - Búsqueda 'jaj': 0 resultados
+2025-11-03 02:11:55,905 - src.controllers.student_controller - INFO - Búsqueda 'jajaj': 0 resultados
+2025-11-03 02:11:55,916 - src.controllers.student_controller - INFO - Búsqueda 'jajaj': 0 resultados
+2025-11-03 02:11:57,164 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 02:11:57,179 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 02:11:57,706 - src.controllers.student_controller - INFO - Búsqueda 'j': 1 resultados
+2025-11-03 02:11:58,235 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 02:11:58,264 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 02:11:59,244 - src.controllers.student_controller - INFO - Búsqueda 'p': 1 resultados
+2025-11-03 02:11:59,415 - src.controllers.student_controller - INFO - Búsqueda 'pe': 1 resultados
+2025-11-03 02:12:00,436 - src.controllers.student_controller - INFO - Búsqueda 'p': 1 resultados
+2025-11-03 02:12:00,571 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 02:12:00,581 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 02:12:00,686 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 02:12:00,697 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 02:12:01,326 - src.controllers.student_controller - INFO - Búsqueda '1': 0 resultados
+2025-11-03 02:12:03,432 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 02:12:03,444 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 02:12:06,822 - src.controllers.student_controller - INFO - Búsqueda 'cl': 0 resultados
+2025-11-03 02:12:06,923 - src.controllers.student_controller - INFO - Búsqueda 'cla': 0 resultados
+2025-11-03 02:12:07,035 - src.controllers.student_controller - INFO - Búsqueda 'cla': 0 resultados
+2025-11-03 02:12:07,302 - src.controllers.student_controller - INFO - Búsqueda 'clas': 0 resultados
+2025-11-03 02:12:07,436 - src.controllers.student_controller - INFO - Búsqueda 'clase': 0 resultados
+2025-11-03 02:12:08,673 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 02:12:08,677 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 02:14:25,743 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 02:14:25,743 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 02:14:25,782 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 13:13:57,407 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 13:13:57,430 - __main__ - INFO - ======================================================================
+2025-11-03 13:13:57,430 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 13:13:57,439 - __main__ - INFO - ======================================================================
+2025-11-03 13:14:10,366 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 13:14:10,366 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 13:14:11,996 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 13:14:11,997 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 13:14:25,916 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 13:14:25,933 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 13:14:25,947 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 13:14:38,710 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 2
+2025-11-03 13:14:38,716 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-03 13:14:38,735 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 13:14:43,279 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-03 13:14:43,279 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 13:14:43,279 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 13:14:44,369 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-03 13:14:44,373 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 13:14:44,384 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 13:14:45,242 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-03 13:14:45,242 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 13:14:45,247 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 13:14:52,550 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 13:14:52,550 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 13:14:52,620 - __main__ - INFO - Aplicación cerrada correctamente

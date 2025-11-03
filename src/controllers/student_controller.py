@@ -3,7 +3,7 @@ Controlador de Estudiantes
 Maneja toda la lógica de negocio para el CRUD de estudiantes
 """
 from src.database.sqlite_manager import SQLiteManager
-from src.database.models import Alumno as Student, Seccion as Section
+from src.database.models import Alumno, Clase
 from sqlalchemy import or_
 import logging
 
@@ -15,34 +15,27 @@ class StudentController:
     def __init__(self):
         self.db_manager = SQLiteManager()
     
-    def get_all_students(self, section_id=None):
-        """
-        Obtener todos los estudiantes
-        Args:
-            section_id: Filtrar por sección (opcional)
-        Returns:
-            Lista de estudiantes
-        """
+    def get_all_students(self, clase_id=None):
+        """Obtener todos los estudiantes"""
         try:
             session = self.db_manager.get_session()
             
-            query = session.query(Student).filter_by(is_active=True)
+            query = session.query(Alumno).filter_by(activo=True)
             
-            if section_id:
-                query = query.filter_by(section_id=section_id)
+            if clase_id:
+                query = query.filter_by(clase_id=clase_id)
             
-            students = query.order_by(Student.list_number).all()
+            students = query.order_by(Alumno.numero_lista).all()
             
-            # Convertir a diccionarios para facilitar el uso en UI
             result = []
             for student in students:
                 result.append({
                     'id': student.id,
-                    'list_number': student.list_number,
-                    'full_name': student.full_name,
-                    'section_id': student.section_id,
-                    'section_name': student.section.name if student.section else 'Sin sección',
-                    'is_active': student.is_active
+                    'list_number': student.numero_lista,
+                    'full_name': student.nombre,
+                    'section_id': student.clase_id,
+                    'section_name': student.clase.nombre if student.clase else 'Sin clase',
+                    'is_active': student.activo
                 })
             
             session.close()
@@ -54,25 +47,19 @@ class StudentController:
             return []
     
     def get_student_by_id(self, student_id):
-        """
-        Obtener un estudiante por ID
-        Args:
-            student_id: ID del estudiante
-        Returns:
-            Diccionario con datos del estudiante o None
-        """
+        """Obtener un estudiante por ID"""
         try:
             session = self.db_manager.get_session()
             
-            student = session.query(Student).filter_by(id=student_id).first()
+            student = session.query(Alumno).filter_by(id=student_id).first()
             
             if student:
                 result = {
                     'id': student.id,
-                    'list_number': student.list_number,
-                    'full_name': student.full_name,
-                    'section_id': student.section_id,
-                    'is_active': student.is_active
+                    'list_number': student.numero_lista,
+                    'full_name': student.nombre,
+                    'section_id': student.clase_id,
+                    'is_active': student.activo
                 }
                 session.close()
                 return result
@@ -85,35 +72,30 @@ class StudentController:
             return None
     
     def create_student(self, full_name, list_number, section_id=None):
-        """
-        Crear un nuevo estudiante
-        Args:
-            full_name: Nombre completo
-            list_number: Número de lista
-            section_id: ID de la sección (opcional)
-        Returns:
-            dict con 'success' y 'message'
-        """
+        """Crear un nuevo estudiante"""
         try:
             session = self.db_manager.get_session()
             
-            # Validar que no exista otro estudiante con el mismo número de lista en la sección
-            if section_id:
-                existing = session.query(Student).filter_by(
-                    section_id=section_id,
-                    list_number=list_number,
-                    is_active=True
-                ).first()
-                
-                if existing:
-                    session.close()
-                    return {
-                        'success': False,
-                        'message': f'Ya existe un estudiante con el número de lista {list_number} en esta sección'
-                    }
+            # Si no hay clase, crear una de ejemplo
+            if section_id is None:
+                section_id = self.get_or_create_default_class(session)
+            
+            # Validar número de lista duplicado
+            existing = session.query(Alumno).filter_by(
+                clase_id=section_id,
+                numero_lista=list_number,
+                activo=True
+            ).first()
+            
+            if existing:
+                session.close()
+                return {
+                    'success': False,
+                    'message': f'Ya existe un estudiante con el número de lista {list_number} en esta clase'
+                }
             
             # Crear nuevo estudiante
-            new_student = Student(
+            new_student = Alumno(
                 nombre=full_name.strip(),
                 numero_lista=list_number,
                 clase_id=section_id,
@@ -138,24 +120,15 @@ class StudentController:
             logger.error(f"Error al crear estudiante: {e}")
             return {
                 'success': False,
-                'message': f'Error al crear estudiante: {str(e)}'
+                'message': f'Error: {str(e)}'
             }
     
     def update_student(self, student_id, full_name=None, list_number=None, section_id=None):
-        """
-        Actualizar un estudiante existente
-        Args:
-            student_id: ID del estudiante
-            full_name: Nuevo nombre (opcional)
-            list_number: Nuevo número de lista (opcional)
-            section_id: Nueva sección (opcional)
-        Returns:
-            dict con 'success' y 'message'
-        """
+        """Actualizar un estudiante existente"""
         try:
             session = self.db_manager.get_session()
             
-            student = session.query(Student).filter_by(id=student_id).first()
+            student = session.query(Alumno).filter_by(id=student_id).first()
             
             if not student:
                 session.close()
@@ -165,29 +138,25 @@ class StudentController:
                 }
             
             # Validar número de lista si se está cambiando
-            if list_number and list_number != student.list_number:
-                if section_id or student.section_id:
-                    check_section = section_id if section_id else student.section_id
-                    existing = session.query(Student).filter_by(
-                        section_id=check_section,
-                        list_number=list_number,
-                        is_active=True
-                    ).filter(Student.id != student_id).first()
-                    
-                    if existing:
-                        session.close()
-                        return {
-                            'success': False,
-                            'message': f'Ya existe un estudiante con el número de lista {list_number} en esta sección'
-                        }
+            if list_number and list_number != student.numero_lista:
+                existing = session.query(Alumno).filter_by(
+                    clase_id=student.clase_id,
+                    numero_lista=list_number,
+                    activo=True
+                ).filter(Alumno.id != student_id).first()
+                
+                if existing:
+                    session.close()
+                    return {
+                        'success': False,
+                        'message': f'Ya existe un estudiante con el número de lista {list_number}'
+                    }
             
             # Actualizar campos
             if full_name:
-                student.full_name = full_name.strip()
+                student.nombre = full_name.strip()
             if list_number:
-                student.list_number = list_number
-            if section_id is not None:
-                student.section_id = section_id
+                student.numero_lista = list_number
             
             session.commit()
             session.close()
@@ -203,21 +172,15 @@ class StudentController:
             logger.error(f"Error al actualizar estudiante {student_id}: {e}")
             return {
                 'success': False,
-                'message': f'Error al actualizar estudiante: {str(e)}'
+                'message': f'Error: {str(e)}'
             }
     
     def delete_student(self, student_id):
-        """
-        Eliminar un estudiante (soft delete)
-        Args:
-            student_id: ID del estudiante
-        Returns:
-            dict con 'success' y 'message'
-        """
+        """Eliminar un estudiante (soft delete)"""
         try:
             session = self.db_manager.get_session()
             
-            student = session.query(Student).filter_by(id=student_id).first()
+            student = session.query(Alumno).filter_by(id=student_id).first()
             
             if not student:
                 session.close()
@@ -226,13 +189,13 @@ class StudentController:
                     'message': 'Estudiante no encontrado'
                 }
             
-            # Soft delete: marcar como inactivo
-            student.is_active = False
+            # Soft delete
+            student.activo = False
             
             session.commit()
             session.close()
             
-            logger.info(f"Estudiante eliminado (soft delete): ID {student_id}")
+            logger.info(f"Estudiante eliminado: ID {student_id}")
             
             return {
                 'success': True,
@@ -243,38 +206,29 @@ class StudentController:
             logger.error(f"Error al eliminar estudiante {student_id}: {e}")
             return {
                 'success': False,
-                'message': f'Error al eliminar estudiante: {str(e)}'
+                'message': f'Error: {str(e)}'
             }
     
     def search_students(self, search_term):
-        """
-        Buscar estudiantes por nombre o número de lista
-        Args:
-            search_term: Término de búsqueda
-        Returns:
-            Lista de estudiantes que coinciden
-        """
+        """Buscar estudiantes por nombre o número de lista"""
         try:
             session = self.db_manager.get_session()
             
-            # Buscar por nombre o número de lista
-            students = session.query(Student).filter(
-                Student.is_active == True,
-                or_(
-                    Student.full_name.ilike(f'%{search_term}%'),
-                    Student.list_number.cast(db.String).ilike(f'%{search_term}%')
-                )
-            ).order_by(Student.list_number).all()
+            # Buscar por nombre
+            students = session.query(Alumno).filter(
+                Alumno.activo == True,
+                Alumno.nombre.ilike(f'%{search_term}%')
+            ).order_by(Alumno.numero_lista).all()
             
             result = []
             for student in students:
                 result.append({
                     'id': student.id,
-                    'list_number': student.list_number,
-                    'full_name': student.full_name,
-                    'section_id': student.section_id,
-                    'section_name': student.section.name if student.section else 'Sin sección',
-                    'is_active': student.is_active
+                    'list_number': student.numero_lista,
+                    'full_name': student.nombre,
+                    'section_id': student.clase_id,
+                    'section_name': student.clase.nombre if student.clase else 'Sin clase',
+                    'is_active': student.activo
                 })
             
             session.close()
@@ -285,83 +239,90 @@ class StudentController:
             logger.error(f"Error al buscar estudiantes: {e}")
             return []
     
-    def get_all_sections(self):
-        """
-        Obtener todas las secciones disponibles
-        Returns:
-            Lista de secciones
-        """
+    def get_or_create_default_class(self, session):
+        """Obtener o crear clase por defecto"""
         try:
-            session = self.db_manager.get_session()
+            # Buscar clase existente
+            clase = session.query(Clase).first()
             
-            sections = session.query(Section).all()
+            if clase:
+                return clase.id
             
-            result = []
-            for section in sections:
-                result.append({
-                    'id': section.id,
-                    'name': section.name,
-                    'grade': section.grade.name if section.grade else 'Sin grado',
-                    'year': section.year
-                })
+            # Crear clase de ejemplo
+            from src.database.models import Usuario, Seccion, Nivel, Institucion
             
-            session.close()
-            return result
+            # Crear usuario de ejemplo si no existe
+            usuario = session.query(Usuario).first()
+            if not usuario:
+                usuario = Usuario(
+                    nombre="Profesor de Ejemplo",
+                    email="profesor@ejemplo.com",
+                    password_hash="hash_temporal",
+                    es_admin=False
+                )
+                session.add(usuario)
+                session.flush()
+            
+            # Crear institución si no existe
+            institucion = session.query(Institucion).first()
+            if not institucion:
+                institucion = Institucion(
+                    nombre="Institución de Ejemplo",
+                    tipo="colegio"
+                )
+                session.add(institucion)
+                session.flush()
+            
+            # Crear nivel si no existe
+            nivel = session.query(Nivel).first()
+            if not nivel:
+                nivel = Nivel(
+                    institucion_id=institucion.id,
+                    nombre="Primer Grado",
+                    orden=1
+                )
+                session.add(nivel)
+                session.flush()
+            
+            # Crear sección si no existe
+            seccion = session.query(Seccion).first()
+            if not seccion:
+                seccion = Seccion(
+                    nivel_id=nivel.id,
+                    nombre="Sección A"
+                )
+                session.add(seccion)
+                session.flush()
+            
+            # Crear clase
+            nueva_clase = Clase(
+                profesor_id=usuario.id,
+                seccion_id=seccion.id,
+                nombre="Clase General",
+                anio_academico=2025,
+                activa=True
+            )
+            session.add(nueva_clase)
+            session.flush()
+            
+            logger.info(f"Clase de ejemplo creada: ID {nueva_clase.id}")
+            return nueva_clase.id
             
         except Exception as e:
-            logger.error(f"Error al obtener secciones: {e}")
-            return []
+            logger.error(f"Error al crear clase de ejemplo: {e}")
+            session.rollback()
+            return None
     
     def create_sample_section(self):
-        """
-        Crear una sección de ejemplo si no existe ninguna
-        Returns:
-            ID de la sección creada o existente
-        """
+        """Compatibilidad con código anterior"""
+        session = self.db_manager.get_session()
         try:
-            session = self.db_manager.get_session()
-            
-            # Verificar si ya existe una sección
-            existing = session.query(Section).first()
-            if existing:
-                session.close()
-                return existing.id
-            
-            # Crear sección de ejemplo
-            from src.database.models import Grade, Institution, Cycle
-            
-            # Crear institución de ejemplo
-            institution = Institution(
-                name="Institución de Ejemplo",
-                institution_type="colegio"
-            )
-            session.add(institution)
+            clase_id = self.get_or_create_default_class(session)
             session.commit()
-            
-            # Crear grado de ejemplo
-            grade = Grade(
-                institution_id=institution.id,
-                name="1° Secundaria",
-                level=1
-            )
-            session.add(grade)
-            session.commit()
-            
-            # Crear sección de ejemplo
-            section = Section(
-                grade_id=grade.id,
-                name="Sección A",
-                year=2025
-            )
-            session.add(section)
-            session.commit()
-            
-            section_id = section.id
             session.close()
-            
-            logger.info(f"Sección de ejemplo creada: ID {section_id}")
-            return section_id
-            
+            return clase_id
         except Exception as e:
-            logger.error(f"Error al crear sección de ejemplo: {e}")
+            session.rollback()
+            session.close()
+            logger.error(f"Error: {e}")
             return None
