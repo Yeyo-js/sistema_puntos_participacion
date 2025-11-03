@@ -1,0 +1,3 @@
+"""
+Vistas de la aplicación
+"""

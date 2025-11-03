@@ -1,0 +1,26 @@
+# Interfaz gráfica
+customtkinter==5.2.2
+pillow>=10.0.0  # Para manejo de imágenes
+
+# Base de datos
+pyodbc==5.0.1
+sqlalchemy==2.0.23
+
+# Excel
+openpyxl==3.1.2
+pandas==2.1.4
+
+# Utilidades
+python-dotenv==1.0.0
+cryptography==41.0.7
+
+# Logging
+colorlog==6.8.0
+
+# OCR y procesamiento de imágenes (para captura de listas)
+pytesseract>=0.3.10
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Procesamiento de texto (para mejorar OCR)
+python-Levenshtein>=0.21.0  # Para corregir errores de OCR

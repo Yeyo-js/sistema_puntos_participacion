@@ -1,0 +1,162 @@
+2025-11-03 00:51:57,750 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 00:51:57,750 - __main__ - INFO - ======================================================================
+2025-11-03 00:51:57,750 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 00:51:57,750 - __main__ - INFO - ======================================================================
+2025-11-03 00:51:57,976 - src.controllers.auth_controller - INFO - Usuario admin por defecto creado: admin@sistema.com / admin123
+2025-11-03 00:55:26,956 - src.controllers.auth_controller - INFO - Usuario registrado exitosamente: craft
+2025-11-03 00:55:26,956 - src.ui.login_window - INFO - Nuevo usuario registrado: craft
+2025-11-03 00:55:42,166 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 00:55:42,177 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 00:55:44,236 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 00:55:44,236 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 00:56:37,294 - src.database.sync_manager - INFO - Iniciando sincronización hacia SQL Server...
+2025-11-03 00:56:54,599 - src.database.sqlserver_manager - ERROR - Error al conectar con SQL Server: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.\r\n (10061) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (10061)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-11-03 00:56:54,599 - src.database.sync_manager - ERROR - Error al sincronizar con servidor: No se pudo conectar a SQL Server
+2025-11-03 00:56:54,599 - src.database.sync_manager - INFO - Iniciando sincronización desde SQL Server...
+2025-11-03 00:57:18,340 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 00:57:18,342 - __main__ - INFO - ======================================================================
+2025-11-03 00:57:18,344 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 00:57:18,346 - __main__ - INFO - ======================================================================
+2025-11-03 00:57:26,267 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 00:57:26,268 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 00:57:27,665 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 00:57:27,665 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 00:57:53,919 - src.ui.main_window - INFO - Cerrando sesión: Yerson
+2025-11-03 00:57:53,919 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 00:58:13,902 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 00:58:13,904 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 00:58:14,537 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 00:58:14,537 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 00:58:21,923 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 00:58:21,923 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 00:58:21,968 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 01:15:05,069 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 01:15:05,069 - __main__ - INFO - ======================================================================
+2025-11-03 01:15:05,069 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 01:15:05,069 - __main__ - INFO - ======================================================================
+2025-11-03 01:17:30,143 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 01:17:30,143 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 01:17:30,726 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 01:17:51,302 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 01:17:51,302 - __main__ - INFO - ======================================================================
+2025-11-03 01:17:51,302 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 01:17:51,302 - __main__ - INFO - ======================================================================
+2025-11-03 01:18:02,456 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 01:18:02,456 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 01:18:03,006 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 01:19:21,634 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 01:19:21,634 - __main__ - INFO - ======================================================================
+2025-11-03 01:19:21,634 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 01:19:21,634 - __main__ - INFO - ======================================================================
+2025-11-03 01:19:40,088 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 01:19:40,088 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 01:19:40,636 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 01:23:12,257 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 01:23:12,257 - __main__ - INFO - ======================================================================
+2025-11-03 01:23:12,257 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 01:23:12,257 - __main__ - INFO - ======================================================================
+2025-11-03 01:23:21,296 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 01:23:21,298 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 01:23:21,832 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 01:27:14,803 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 01:27:14,803 - __main__ - INFO - ======================================================================
+2025-11-03 01:27:14,803 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 01:27:14,803 - __main__ - INFO - ======================================================================
+2025-11-03 01:27:25,767 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 01:27:25,767 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 01:27:26,333 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 01:31:42,079 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 01:31:42,079 - __main__ - INFO - ======================================================================
+2025-11-03 01:31:42,079 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 01:31:42,079 - __main__ - INFO - ======================================================================
+2025-11-03 01:31:53,385 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 01:31:53,385 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 01:31:53,960 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 01:37:07,931 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 01:37:07,931 - __main__ - INFO - ======================================================================
+2025-11-03 01:37:07,931 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 01:37:07,931 - __main__ - INFO - ======================================================================
+2025-11-03 01:37:20,715 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 01:37:20,715 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 01:37:21,308 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 01:39:01,420 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 01:39:01,420 - __main__ - INFO - ======================================================================
+2025-11-03 01:39:01,420 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 01:39:01,428 - __main__ - INFO - ======================================================================
+2025-11-03 01:39:12,687 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 01:39:12,687 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 01:39:13,894 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 01:39:13,894 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 01:42:51,417 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 01:42:51,417 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 01:42:51,470 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 01:42:54,614 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 01:42:54,614 - __main__ - INFO - ======================================================================
+2025-11-03 01:42:54,614 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 01:42:54,614 - __main__ - INFO - ======================================================================
+2025-11-03 01:43:08,076 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 01:43:08,076 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 01:43:09,339 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 01:43:09,339 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 01:48:07,650 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 01:48:07,650 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 01:48:07,693 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 01:48:10,896 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 01:48:10,896 - __main__ - INFO - ======================================================================
+2025-11-03 01:48:10,896 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 01:48:10,896 - __main__ - INFO - ======================================================================
+2025-11-03 01:48:22,405 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 01:48:22,405 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 01:48:23,625 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 01:48:23,626 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 01:48:29,677 - src.controllers.student_controller - ERROR - Error al obtener estudiantes: Entity namespace for "alumnos" has no property "is_active"
+2025-11-03 01:48:29,677 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 01:48:29,677 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 01:48:37,576 - src.controllers.student_controller - ERROR - Error al buscar estudiantes: type object 'Alumno' has no attribute 'is_active'
+2025-11-03 01:48:37,591 - src.controllers.student_controller - ERROR - Error al buscar estudiantes: type object 'Alumno' has no attribute 'is_active'
+2025-11-03 01:48:37,618 - src.controllers.student_controller - ERROR - Error al buscar estudiantes: type object 'Alumno' has no attribute 'is_active'
+2025-11-03 01:48:37,693 - src.controllers.student_controller - ERROR - Error al buscar estudiantes: type object 'Alumno' has no attribute 'is_active'
+2025-11-03 01:48:39,042 - src.controllers.student_controller - ERROR - Error al buscar estudiantes: type object 'Alumno' has no attribute 'is_active'
+2025-11-03 01:48:39,201 - src.controllers.student_controller - ERROR - Error al buscar estudiantes: type object 'Alumno' has no attribute 'is_active'
+2025-11-03 01:48:39,349 - src.controllers.student_controller - ERROR - Error al buscar estudiantes: type object 'Alumno' has no attribute 'is_active'
+2025-11-03 01:48:39,529 - src.controllers.student_controller - ERROR - Error al obtener estudiantes: Entity namespace for "alumnos" has no property "is_active"
+2025-11-03 01:48:39,529 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 01:48:39,721 - src.controllers.student_controller - ERROR - Error al obtener estudiantes: Entity namespace for "alumnos" has no property "is_active"
+2025-11-03 01:48:39,723 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 01:49:07,431 - src.controllers.student_controller - ERROR - Error al obtener estudiantes: Entity namespace for "alumnos" has no property "is_active"
+2025-11-03 01:49:07,431 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 01:49:24,124 - src.controllers.student_controller - ERROR - Error al crear sección de ejemplo: cannot import name 'Grade' from 'src.database.models' (D:\DEV\INVESTIGACION\sistema-participacion\src\database\models.py)
+2025-11-03 01:49:24,124 - src.controllers.student_controller - ERROR - Error al crear estudiante: 'full_name' is an invalid keyword argument for Alumno
+2025-11-03 01:49:58,739 - src.controllers.student_controller - ERROR - Error al crear sección de ejemplo: cannot import name 'Grade' from 'src.database.models' (D:\DEV\INVESTIGACION\sistema-participacion\src\database\models.py)
+2025-11-03 01:49:58,739 - src.controllers.student_controller - ERROR - Error al crear estudiante: 'full_name' is an invalid keyword argument for Alumno
+2025-11-03 01:49:59,377 - src.controllers.student_controller - ERROR - Error al crear sección de ejemplo: cannot import name 'Grade' from 'src.database.models' (D:\DEV\INVESTIGACION\sistema-participacion\src\database\models.py)
+2025-11-03 01:49:59,377 - src.controllers.student_controller - ERROR - Error al crear estudiante: 'full_name' is an invalid keyword argument for Alumno
+2025-11-03 01:49:59,578 - src.controllers.student_controller - ERROR - Error al crear sección de ejemplo: cannot import name 'Grade' from 'src.database.models' (D:\DEV\INVESTIGACION\sistema-participacion\src\database\models.py)
+2025-11-03 01:49:59,578 - src.controllers.student_controller - ERROR - Error al crear estudiante: 'full_name' is an invalid keyword argument for Alumno
+2025-11-03 01:49:59,763 - src.controllers.student_controller - ERROR - Error al crear sección de ejemplo: cannot import name 'Grade' from 'src.database.models' (D:\DEV\INVESTIGACION\sistema-participacion\src\database\models.py)
+2025-11-03 01:49:59,763 - src.controllers.student_controller - ERROR - Error al crear estudiante: 'full_name' is an invalid keyword argument for Alumno
+2025-11-03 01:55:23,759 - src.controllers.student_controller - ERROR - Error al crear sección de ejemplo: cannot import name 'Grade' from 'src.database.models' (D:\DEV\INVESTIGACION\sistema-participacion\src\database\models.py)
+2025-11-03 01:55:23,759 - src.controllers.student_controller - ERROR - Error al crear estudiante: 'full_name' is an invalid keyword argument for Alumno
+2025-11-03 01:55:28,852 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 01:55:28,858 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 01:55:28,902 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 01:55:31,940 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 01:55:31,940 - __main__ - INFO - ======================================================================
+2025-11-03 01:55:31,940 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 01:55:31,940 - __main__ - INFO - ======================================================================
+2025-11-03 01:55:42,023 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 01:55:42,023 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 01:55:43,276 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 01:55:43,276 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 01:55:47,882 - src.controllers.student_controller - ERROR - Error al obtener estudiantes: Entity namespace for "alumnos" has no property "is_active"
+2025-11-03 01:55:47,886 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 01:55:47,886 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 01:55:58,553 - src.controllers.student_controller - ERROR - Error al crear sección de ejemplo: cannot import name 'Grade' from 'src.database.models' (D:\DEV\INVESTIGACION\sistema-participacion\src\database\models.py)
+2025-11-03 01:55:58,556 - src.controllers.student_controller - ERROR - Error al crear estudiante: (sqlite3.IntegrityError) NOT NULL constraint failed: alumnos.clase_id
+[SQL: INSERT INTO alumnos (clase_id, nombre, numero_lista, activo, fecha_creacion, fecha_actualizacion) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (None, 'Yerson Fustamante', 1, 1, '2025-11-03 01:55:58.555630', '2025-11-03 01:55:58.555630')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-11-03 01:59:40,876 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 01:59:40,876 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 01:59:40,925 - __main__ - INFO - Aplicación cerrada correctamente
