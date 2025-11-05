@@ -248,3 +248,950 @@
 2025-11-03 13:14:52,550 - src.ui.main_window - INFO - Cerrando aplicación...
 2025-11-03 13:14:52,550 - src.database.sync_manager - INFO - Sincronización automática detenida
 2025-11-03 13:14:52,620 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 16:23:31,297 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 16:23:31,332 - __main__ - INFO - ======================================================================
+2025-11-03 16:23:31,332 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 16:23:31,332 - __main__ - INFO - ======================================================================
+2025-11-03 16:24:39,038 - src.controllers.auth_controller - INFO - Usuario registrado exitosamente: yeyo
+2025-11-03 16:24:39,038 - src.ui.login_window - INFO - Nuevo usuario registrado: yeyo
+2025-11-03 16:25:00,246 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: yeyo
+2025-11-03 16:25:00,246 - src.ui.login_window - INFO - Login exitoso para: yeyo
+2025-11-03 16:25:01,936 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 16:25:01,936 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yeyo
+2025-11-03 16:25:23,040 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-03 16:25:23,049 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 16:25:23,049 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 16:25:42,892 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-03 16:25:42,902 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 16:25:42,902 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 16:26:00,618 - src.controllers.student_controller - INFO - Estudiante creado: duran (ID: 3)
+2025-11-03 16:26:00,637 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 16:26:00,659 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 16:26:13,207 - src.controllers.student_controller - INFO - Estudiante actualizado: ID 3
+2025-11-03 16:26:13,231 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 16:26:13,237 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 16:26:34,115 - src.controllers.student_controller - INFO - Búsqueda 'sa': 1 resultados
+2025-11-03 16:26:34,199 - src.controllers.student_controller - INFO - Búsqueda 'sa': 1 resultados
+2025-11-03 16:26:35,628 - src.controllers.student_controller - INFO - Búsqueda 's': 1 resultados
+2025-11-03 16:26:35,776 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 16:26:35,797 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 16:26:36,637 - src.controllers.student_controller - INFO - Búsqueda 'd': 1 resultados
+2025-11-03 16:26:37,011 - src.controllers.student_controller - INFO - Búsqueda 'dr': 0 resultados
+2025-11-03 16:26:43,111 - src.controllers.student_controller - INFO - Búsqueda 'd': 1 resultados
+2025-11-03 16:26:43,365 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 16:26:43,378 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 16:27:06,521 - src.database.sync_manager - INFO - Iniciando sincronización hacia SQL Server...
+2025-11-03 16:27:22,648 - src.database.sqlserver_manager - ERROR - Error al conectar con SQL Server: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.\r\n (10061) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (10061)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-11-03 16:27:22,648 - src.database.sync_manager - ERROR - Error al sincronizar con servidor: No se pudo conectar a SQL Server
+2025-11-03 16:27:22,651 - src.database.sync_manager - INFO - Iniciando sincronización desde SQL Server...
+2025-11-03 21:53:43,533 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 21:53:43,533 - __main__ - INFO - ======================================================================
+2025-11-03 21:53:43,533 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 21:53:43,533 - __main__ - INFO - ======================================================================
+2025-11-03 21:54:40,471 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 21:54:40,471 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 21:54:47,992 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 21:54:47,992 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 21:55:04,043 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 21:55:04,054 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 21:55:04,056 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 21:55:40,862 - src.controllers.import_controller - INFO - Archivo validado: 10 registros encontrados
+2025-11-03 21:57:41,733 - src.controllers.student_controller - INFO - Estudiante creado: María López Rodríguez (ID: 4)
+2025-11-03 21:57:41,736 - src.controllers.student_controller - INFO - Estudiante creado: Carlos Sánchez Martínez (ID: 5)
+2025-11-03 21:57:41,752 - src.controllers.student_controller - INFO - Estudiante creado: Ana Torres Fernández (ID: 6)
+2025-11-03 21:57:41,764 - src.controllers.student_controller - INFO - Estudiante creado: Luis Ramírez Gómez (ID: 7)
+2025-11-03 21:57:41,777 - src.controllers.student_controller - INFO - Estudiante creado: Laura Díaz Silva (ID: 8)
+2025-11-03 21:57:41,796 - src.controllers.student_controller - INFO - Estudiante creado: Pedro Morales Castro (ID: 9)
+2025-11-03 21:57:41,804 - src.controllers.student_controller - INFO - Estudiante creado: Carmen Jiménez Ruiz (ID: 10)
+2025-11-03 21:57:41,818 - src.controllers.student_controller - INFO - Estudiante creado: Roberto Vargas Mendoza (ID: 11)
+2025-11-03 21:57:41,830 - src.controllers.student_controller - INFO - Estudiante creado: Isabel Romero Ortiz (ID: 12)
+2025-11-03 21:57:41,831 - src.controllers.import_controller - INFO - Importación completada: 9 exitosos, 1 duplicados, 0 errores
+2025-11-03 21:57:56,648 - src.controllers.student_controller - INFO - Se obtuvieron 10 estudiantes
+2025-11-03 21:57:56,957 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 10 registros
+2025-11-03 21:58:27,318 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 3
+2025-11-03 21:58:27,386 - src.controllers.student_controller - INFO - Se obtuvieron 9 estudiantes
+2025-11-03 21:58:27,461 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 9 registros
+2025-11-03 21:58:29,388 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 4
+2025-11-03 21:58:29,427 - src.controllers.student_controller - INFO - Se obtuvieron 8 estudiantes
+2025-11-03 21:58:29,507 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 8 registros
+2025-11-03 21:58:30,994 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 5
+2025-11-03 21:58:31,039 - src.controllers.student_controller - INFO - Se obtuvieron 7 estudiantes
+2025-11-03 21:58:31,097 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 7 registros
+2025-11-03 21:58:33,394 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 6
+2025-11-03 21:58:33,434 - src.controllers.student_controller - INFO - Se obtuvieron 6 estudiantes
+2025-11-03 21:58:33,483 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 6 registros
+2025-11-03 21:59:04,200 - src.controllers.import_controller - INFO - Plantilla Excel creada: C:/Users/fusta/Downloads/plantilla de estudiantes.xlsx
+2025-11-03 21:59:04,200 - src.ui.views.students_view - INFO - Plantilla descargada en: C:/Users/fusta/Downloads/plantilla de estudiantes.xlsx
+2025-11-03 22:07:50,800 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 22:07:50,800 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 22:07:50,869 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:11:02,100 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:11:02,100 - __main__ - INFO - ======================================================================
+2025-11-03 22:11:02,100 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:11:02,100 - __main__ - INFO - ======================================================================
+2025-11-03 22:11:11,711 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 22:11:11,711 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 22:11:13,370 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 22:11:13,376 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 22:11:19,416 - src.controllers.student_controller - INFO - Se obtuvieron 6 estudiantes
+2025-11-03 22:11:19,495 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 6 registros
+2025-11-03 22:11:19,495 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 22:12:38,427 - src.controllers.import_controller - INFO - Archivo validado: 10 registros encontrados
+2025-11-03 22:16:10,772 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 22:16:10,772 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 22:16:10,859 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:16:15,707 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:16:15,707 - __main__ - INFO - ======================================================================
+2025-11-03 22:16:15,707 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:16:15,707 - __main__ - INFO - ======================================================================
+2025-11-03 22:16:22,357 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 22:16:22,357 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 22:16:24,098 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 22:16:24,100 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 22:16:31,031 - src.controllers.student_controller - INFO - Se obtuvieron 6 estudiantes
+2025-11-03 22:16:31,123 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 6 registros
+2025-11-03 22:16:31,123 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 22:17:00,926 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 22:17:00,926 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 22:17:00,979 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:17:05,793 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:17:05,793 - __main__ - INFO - ======================================================================
+2025-11-03 22:17:05,793 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:17:05,793 - __main__ - INFO - ======================================================================
+2025-11-03 22:17:26,392 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 22:17:26,392 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 22:17:28,108 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 22:17:28,113 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 22:17:32,750 - src.controllers.student_controller - INFO - Se obtuvieron 6 estudiantes
+2025-11-03 22:17:32,828 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 6 registros
+2025-11-03 22:17:32,829 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 22:17:55,929 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 22:17:55,929 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 22:17:56,020 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:18:06,210 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:18:06,210 - __main__ - INFO - ======================================================================
+2025-11-03 22:18:06,210 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:18:06,210 - __main__ - INFO - ======================================================================
+2025-11-03 22:18:13,266 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 22:18:13,266 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 22:18:15,113 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 22:18:15,113 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 22:18:18,511 - src.controllers.student_controller - INFO - Se obtuvieron 6 estudiantes
+2025-11-03 22:18:18,586 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 6 registros
+2025-11-03 22:18:18,586 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 22:19:03,202 - src.controllers.import_controller - INFO - Archivo validado: 5 registros encontrados
+2025-11-03 22:19:10,552 - src.controllers.student_controller - INFO - Estudiante creado: Juan Pérez García (ID: 13)
+2025-11-03 22:19:10,557 - src.controllers.student_controller - INFO - Estudiante creado: María López Rodríguez (ID: 14)
+2025-11-03 22:19:10,563 - src.controllers.student_controller - INFO - Estudiante creado: Carlos Sánchez Martínez (ID: 15)
+2025-11-03 22:19:10,570 - src.controllers.student_controller - INFO - Estudiante creado: Ana Torres Fernández (ID: 16)
+2025-11-03 22:19:10,570 - src.controllers.import_controller - INFO - Importación completada: 4 exitosos, 1 duplicados, 0 errores
+2025-11-03 22:19:21,024 - src.controllers.student_controller - INFO - Se obtuvieron 10 estudiantes
+2025-11-03 22:19:21,112 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 10 registros
+2025-11-03 22:19:27,288 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 13
+2025-11-03 22:19:27,339 - src.controllers.student_controller - INFO - Se obtuvieron 9 estudiantes
+2025-11-03 22:19:27,421 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 9 registros
+2025-11-03 22:19:29,047 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 14
+2025-11-03 22:19:29,117 - src.controllers.student_controller - INFO - Se obtuvieron 8 estudiantes
+2025-11-03 22:19:29,185 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 8 registros
+2025-11-03 22:19:30,580 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 15
+2025-11-03 22:19:30,618 - src.controllers.student_controller - INFO - Se obtuvieron 7 estudiantes
+2025-11-03 22:19:30,679 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 7 registros
+2025-11-03 22:19:32,214 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 16
+2025-11-03 22:19:32,248 - src.controllers.student_controller - INFO - Se obtuvieron 6 estudiantes
+2025-11-03 22:19:32,306 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 6 registros
+2025-11-03 22:19:34,614 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 7
+2025-11-03 22:19:34,646 - src.controllers.student_controller - INFO - Se obtuvieron 5 estudiantes
+2025-11-03 22:19:34,692 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 5 registros
+2025-11-03 22:19:46,147 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 8
+2025-11-03 22:19:46,177 - src.controllers.student_controller - INFO - Se obtuvieron 4 estudiantes
+2025-11-03 22:19:46,213 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 4 registros
+2025-11-03 22:19:47,771 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 9
+2025-11-03 22:19:47,793 - src.controllers.student_controller - INFO - Se obtuvieron 3 estudiantes
+2025-11-03 22:19:47,816 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 3 registros
+2025-11-03 22:19:49,224 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 10
+2025-11-03 22:19:49,240 - src.controllers.student_controller - INFO - Se obtuvieron 2 estudiantes
+2025-11-03 22:19:49,273 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 2 registros
+2025-11-03 22:19:50,555 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 11
+2025-11-03 22:19:50,570 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-03 22:19:50,579 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-03 22:19:52,196 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 12
+2025-11-03 22:19:52,198 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-03 22:19:52,205 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 22:19:54,183 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 22:19:54,183 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 22:19:54,233 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:20:53,260 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:20:53,260 - __main__ - INFO - ======================================================================
+2025-11-03 22:20:53,260 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:20:53,260 - __main__ - INFO - ======================================================================
+2025-11-03 22:21:02,907 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 22:21:02,907 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 22:21:04,762 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 22:21:04,762 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 22:21:26,734 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 22:21:26,734 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 22:21:26,794 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:28:06,267 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:28:06,267 - __main__ - INFO - ======================================================================
+2025-11-03 22:28:06,267 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:28:06,267 - __main__ - INFO - ======================================================================
+2025-11-03 22:28:17,850 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 22:28:17,852 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 22:28:19,635 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 22:28:19,635 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 22:28:29,207 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 22:28:29,207 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 22:28:29,269 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:29:17,791 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:29:17,791 - __main__ - INFO - ======================================================================
+2025-11-03 22:29:17,791 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:29:17,791 - __main__ - INFO - ======================================================================
+2025-11-03 22:29:28,029 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 22:29:28,031 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 22:29:29,812 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 22:29:29,812 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 22:32:03,464 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 22:32:03,464 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 22:32:03,521 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:32:10,827 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:32:10,827 - __main__ - INFO - ======================================================================
+2025-11-03 22:32:10,827 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:32:10,827 - __main__ - INFO - ======================================================================
+2025-11-03 22:32:18,821 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 22:32:18,821 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 22:32:20,599 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 22:32:20,599 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 22:32:33,235 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 22:32:33,235 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 22:32:33,308 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:33:09,017 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:33:09,017 - __main__ - INFO - ======================================================================
+2025-11-03 22:33:09,017 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:33:09,017 - __main__ - INFO - ======================================================================
+2025-11-03 22:33:18,689 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 22:33:18,689 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 22:33:20,363 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 22:33:20,363 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 22:34:09,291 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 22:34:09,306 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 22:34:09,359 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:34:11,547 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:34:11,547 - __main__ - INFO - ======================================================================
+2025-11-03 22:34:11,547 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:34:11,547 - __main__ - INFO - ======================================================================
+2025-11-03 22:34:25,580 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: craft
+2025-11-03 22:34:25,580 - src.ui.login_window - INFO - Login exitoso para: craft
+2025-11-03 22:34:27,196 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 22:34:27,197 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: Yerson
+2025-11-03 22:34:41,967 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 22:34:41,967 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 22:34:42,019 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:35:37,981 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:35:37,981 - __main__ - INFO - ======================================================================
+2025-11-03 22:35:37,981 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:35:37,981 - __main__ - INFO - ======================================================================
+2025-11-03 22:45:48,525 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:52:18,568 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:52:18,568 - __main__ - INFO - ======================================================================
+2025-11-03 22:52:18,568 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:52:18,568 - __main__ - INFO - ======================================================================
+2025-11-03 22:52:18,793 - src.controllers.auth_controller - INFO - Usuario admin por defecto creado: admin / admin123
+2025-11-03 22:52:30,169 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:52:32,731 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:52:32,731 - __main__ - INFO - ======================================================================
+2025-11-03 22:52:32,731 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:52:32,731 - __main__ - INFO - ======================================================================
+2025-11-03 22:52:53,217 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:54:13,938 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:54:13,938 - __main__ - INFO - ======================================================================
+2025-11-03 22:54:13,938 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:54:13,938 - __main__ - INFO - ======================================================================
+2025-11-03 22:54:26,409 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:54:39,863 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:54:39,863 - __main__ - INFO - ======================================================================
+2025-11-03 22:54:39,863 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:54:39,863 - __main__ - INFO - ======================================================================
+2025-11-03 22:54:49,650 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:54:57,498 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:54:57,498 - __main__ - INFO - ======================================================================
+2025-11-03 22:54:57,498 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:54:57,498 - __main__ - INFO - ======================================================================
+2025-11-03 22:55:07,426 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:55:23,458 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:55:23,462 - __main__ - INFO - ======================================================================
+2025-11-03 22:55:23,462 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:55:23,462 - __main__ - INFO - ======================================================================
+2025-11-03 22:55:34,634 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:55:47,220 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:55:47,220 - __main__ - INFO - ======================================================================
+2025-11-03 22:55:47,220 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:55:47,220 - __main__ - INFO - ======================================================================
+2025-11-03 22:55:51,647 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:56:10,343 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:56:10,343 - __main__ - INFO - ======================================================================
+2025-11-03 22:56:10,343 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:56:10,343 - __main__ - INFO - ======================================================================
+2025-11-03 22:56:36,604 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:56:38,832 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:56:38,832 - __main__ - INFO - ======================================================================
+2025-11-03 22:56:38,832 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:56:38,832 - __main__ - INFO - ======================================================================
+2025-11-03 22:56:43,592 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:56:50,341 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:56:50,347 - __main__ - INFO - ======================================================================
+2025-11-03 22:56:50,347 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:56:50,347 - __main__ - INFO - ======================================================================
+2025-11-03 22:57:50,144 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:57:51,933 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:57:51,933 - __main__ - INFO - ======================================================================
+2025-11-03 22:57:51,933 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:57:51,933 - __main__ - INFO - ======================================================================
+2025-11-03 22:59:06,832 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 22:59:06,995 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 22:59:09,570 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 22:59:09,570 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 22:59:17,769 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 22:59:17,769 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 22:59:17,816 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 22:59:29,457 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 22:59:29,457 - __main__ - INFO - ======================================================================
+2025-11-03 22:59:29,457 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 22:59:29,457 - __main__ - INFO - ======================================================================
+2025-11-03 22:59:40,996 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 22:59:40,998 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 22:59:41,141 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 22:59:41,149 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:00:32,003 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:00:32,005 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:00:32,005 - src.utils.session_manager - INFO - PIN actualizado
+2025-11-03 23:00:32,007 - src.controllers.auth_controller - INFO - PIN configurado para: admin
+2025-11-03 23:00:33,793 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:00:33,793 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:00:37,540 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:00:37,540 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:00:37,587 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:00:39,537 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:00:39,539 - __main__ - INFO - ======================================================================
+2025-11-03 23:00:39,539 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:00:39,539 - __main__ - INFO - ======================================================================
+2025-11-03 23:00:39,665 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:00:39,667 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:00:39,668 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:00:40,946 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:00:40,946 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:00:46,329 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:00:46,329 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:00:46,376 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:03:18,885 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:03:18,885 - __main__ - INFO - ======================================================================
+2025-11-03 23:03:18,885 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:03:18,885 - __main__ - INFO - ======================================================================
+2025-11-03 23:03:19,001 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:03:19,005 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:03:19,006 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:03:20,331 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:03:20,332 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:03:23,905 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:03:23,905 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:03:23,958 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:03:39,607 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:03:39,607 - __main__ - INFO - ======================================================================
+2025-11-03 23:03:39,607 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:03:39,607 - __main__ - INFO - ======================================================================
+2025-11-03 23:03:39,831 - src.controllers.auth_controller - INFO - Usuario admin por defecto creado: admin / admin123
+2025-11-03 23:03:39,944 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:03:39,947 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:03:39,947 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:03:41,233 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:03:41,234 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:03:47,880 - src.ui.main_window - INFO - Cerrando sesión: admin
+2025-11-03 23:03:47,880 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:03:48,029 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:03:48,030 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:03:48,030 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:03:48,249 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:03:48,249 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:03:49,942 - src.ui.main_window - INFO - Cerrando sesión: admin
+2025-11-03 23:03:49,942 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:03:50,081 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:03:50,081 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:03:50,085 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:03:50,334 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:03:50,334 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:03:50,754 - src.ui.main_window - INFO - Cerrando sesión: admin
+2025-11-03 23:03:50,754 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:03:50,852 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:03:50,852 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:03:50,852 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:03:51,069 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:03:51,069 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:03:52,644 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:03:52,654 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:03:52,696 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:08:10,661 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:08:10,661 - __main__ - INFO - ======================================================================
+2025-11-03 23:08:10,661 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:08:10,661 - __main__ - INFO - ======================================================================
+2025-11-03 23:08:10,767 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:08:10,770 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:08:10,770 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:08:12,134 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:08:12,136 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:08:14,756 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:08:14,756 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:08:14,802 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:08:27,706 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:08:27,708 - __main__ - INFO - ======================================================================
+2025-11-03 23:08:27,708 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:08:27,708 - __main__ - INFO - ======================================================================
+2025-11-03 23:08:27,938 - src.controllers.auth_controller - INFO - Usuario admin por defecto creado: admin / admin123
+2025-11-03 23:08:28,046 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:08:28,051 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:08:28,052 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:08:29,439 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:08:29,439 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:08:32,348 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:08:32,348 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:08:32,397 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:10:18,731 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:10:18,731 - __main__ - INFO - ======================================================================
+2025-11-03 23:10:18,731 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:10:18,731 - __main__ - INFO - ======================================================================
+2025-11-03 23:10:18,842 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:10:18,842 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:10:53,761 - src.controllers.auth_controller - WARNING - Usuario bloqueado por 30s: admin
+2025-11-03 23:11:20,682 - src.controllers.auth_controller - INFO - Usuario registrado exitosamente: yeyo
+2025-11-03 23:11:20,844 - src.ui.login_window - INFO - Nuevo usuario registrado: yeyo
+2025-11-03 23:12:02,911 - src.controllers.auth_controller - WARNING - Usuario bloqueado por 30s: yeyo
+2025-11-03 23:12:19,831 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:12:22,235 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:12:22,235 - __main__ - INFO - ======================================================================
+2025-11-03 23:12:22,235 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:12:22,235 - __main__ - INFO - ======================================================================
+2025-11-03 23:13:10,226 - src.controllers.auth_controller - ERROR - Error durante registro: (sqlite3.IntegrityError) UNIQUE constraint failed: usuarios.email
+[SQL: INSERT INTO usuarios (nombre, email, password_hash, es_admin, activo, fecha_creacion, fecha_actualizacion) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('yerson', 'yeyo@sistema.local', '$2b$12$skhpBl/hpJHmlhsTeRkZZeUrv4r4yToZ8Owmui1wHw14Nz45aaRVW', 0, 1, '2025-11-03 23:13:10.226160', '2025-11-03 23:13:10.226160')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-11-03 23:13:29,216 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:14:05,157 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:14:05,157 - __main__ - INFO - ======================================================================
+2025-11-03 23:14:05,157 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:14:05,157 - __main__ - INFO - ======================================================================
+2025-11-03 23:14:05,288 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:14:05,288 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:14:35,823 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 23:14:35,823 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 23:14:35,974 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 23:14:35,979 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:14:45,018 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:14:45,020 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:14:47,271 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:14:47,271 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:14:47,349 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:15:06,376 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:15:06,392 - __main__ - INFO - ======================================================================
+2025-11-03 23:15:06,392 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:15:06,392 - __main__ - INFO - ======================================================================
+2025-11-03 23:15:06,503 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:15:06,506 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:15:06,506 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:15:07,914 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:15:07,914 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:15:09,969 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:15:09,969 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:15:10,020 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:15:18,485 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:15:18,485 - __main__ - INFO - ======================================================================
+2025-11-03 23:15:18,485 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:15:18,485 - __main__ - INFO - ======================================================================
+2025-11-03 23:15:18,615 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:15:18,616 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:15:30,566 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 23:15:30,568 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 23:15:30,704 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 23:15:30,704 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:15:39,974 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:15:39,974 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:15:41,482 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:15:41,482 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:15:41,527 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:16:05,742 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:16:05,742 - __main__ - INFO - ======================================================================
+2025-11-03 23:16:05,742 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:16:05,742 - __main__ - INFO - ======================================================================
+2025-11-03 23:16:05,849 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:16:05,852 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:16:05,853 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:16:07,122 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:16:07,128 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:16:08,786 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:16:08,786 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:16:08,836 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:16:19,775 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:16:19,775 - __main__ - INFO - ======================================================================
+2025-11-03 23:16:19,775 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:16:19,775 - __main__ - INFO - ======================================================================
+2025-11-03 23:16:19,899 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:16:19,899 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:16:29,077 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 23:16:29,077 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 23:16:29,240 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 23:16:29,240 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:16:53,079 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:16:53,080 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:16:54,393 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:16:54,393 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:16:54,434 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:17:19,952 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:17:19,952 - __main__ - INFO - ======================================================================
+2025-11-03 23:17:19,952 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:17:19,952 - __main__ - INFO - ======================================================================
+2025-11-03 23:17:20,065 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:17:20,068 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:17:28,919 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 23:17:28,919 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 23:17:29,098 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 23:17:29,098 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:17:38,212 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:17:38,212 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:17:39,520 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:17:39,520 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:17:39,572 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:18:03,256 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:18:03,256 - __main__ - INFO - ======================================================================
+2025-11-03 23:18:03,256 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:18:03,256 - __main__ - INFO - ======================================================================
+2025-11-03 23:18:03,379 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:18:03,380 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:18:12,459 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 23:18:12,459 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 23:18:12,605 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 23:18:12,605 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:18:28,700 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:18:28,700 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:18:30,003 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:18:30,003 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:18:30,049 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:18:53,316 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:18:53,316 - __main__ - INFO - ======================================================================
+2025-11-03 23:18:53,316 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:18:53,316 - __main__ - INFO - ======================================================================
+2025-11-03 23:18:53,438 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:18:53,443 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:18:53,443 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:18:54,881 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:18:54,881 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:18:56,557 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:18:56,557 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:18:56,605 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:19:03,753 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:19:03,753 - __main__ - INFO - ======================================================================
+2025-11-03 23:19:03,753 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:19:03,753 - __main__ - INFO - ======================================================================
+2025-11-03 23:19:03,880 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:19:03,881 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:19:13,786 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 23:19:13,788 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 23:19:13,952 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 23:19:13,952 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:19:21,136 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:19:21,137 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:19:22,909 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:19:22,909 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:19:22,965 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:19:43,566 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:19:43,566 - __main__ - INFO - ======================================================================
+2025-11-03 23:19:43,566 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:19:43,566 - __main__ - INFO - ======================================================================
+2025-11-03 23:19:43,682 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:19:43,682 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:19:54,706 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 23:19:54,706 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 23:19:54,876 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 23:19:54,876 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:20:19,053 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:20:19,053 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:20:19,985 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:20:19,985 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:20:20,045 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:20:54,434 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:20:54,434 - __main__ - INFO - ======================================================================
+2025-11-03 23:20:54,434 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:20:54,434 - __main__ - INFO - ======================================================================
+2025-11-03 23:20:54,542 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:20:54,543 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:21:03,735 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 23:21:03,735 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 23:21:03,896 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 23:21:03,896 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:21:21,133 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:21:21,133 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:21:23,161 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:21:23,161 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:21:23,206 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:22:45,952 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:22:45,952 - __main__ - INFO - ======================================================================
+2025-11-03 23:22:45,952 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:22:45,952 - __main__ - INFO - ======================================================================
+2025-11-03 23:22:46,064 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:22:46,064 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:23:14,095 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 23:23:14,095 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 23:23:14,219 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 23:23:14,219 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:23:22,316 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:23:22,316 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:23:23,135 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:23:23,135 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:23:23,190 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:24:04,556 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:24:04,556 - __main__ - INFO - ======================================================================
+2025-11-03 23:24:04,556 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:24:04,556 - __main__ - INFO - ======================================================================
+2025-11-03 23:24:04,670 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:24:04,672 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:24:17,261 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 23:24:17,261 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 23:24:17,409 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 23:24:17,409 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:24:26,339 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:24:26,339 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:24:27,850 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:24:27,850 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:24:27,894 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:24:47,292 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:24:47,292 - __main__ - INFO - ======================================================================
+2025-11-03 23:24:47,292 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:24:47,292 - __main__ - INFO - ======================================================================
+2025-11-03 23:24:47,399 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:24:47,400 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:24:56,011 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 23:24:56,011 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 23:24:56,166 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 23:24:56,166 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:25:08,923 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:25:08,925 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:25:10,231 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:25:10,231 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:25:10,280 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:25:39,471 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:25:39,471 - __main__ - INFO - ======================================================================
+2025-11-03 23:25:39,471 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:25:39,471 - __main__ - INFO - ======================================================================
+2025-11-03 23:25:39,588 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:25:39,592 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:25:39,592 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:25:40,837 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:25:40,837 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:25:41,651 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:25:41,651 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:25:41,698 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:25:49,085 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:25:49,085 - __main__ - INFO - ======================================================================
+2025-11-03 23:25:49,085 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:25:49,085 - __main__ - INFO - ======================================================================
+2025-11-03 23:25:49,206 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:25:49,206 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:25:57,754 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 23:25:57,754 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 23:25:57,873 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 23:25:57,873 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:26:05,550 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:26:05,550 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:26:07,234 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:26:07,234 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:26:07,279 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:26:27,108 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:26:27,108 - __main__ - INFO - ======================================================================
+2025-11-03 23:26:27,108 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:26:27,108 - __main__ - INFO - ======================================================================
+2025-11-03 23:26:27,229 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:26:27,230 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:26:37,600 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 23:26:37,600 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 23:26:37,757 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 23:26:37,763 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:26:50,917 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:26:50,918 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:26:52,593 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:26:52,593 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:26:52,639 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:27:51,036 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:27:51,036 - __main__ - INFO - ======================================================================
+2025-11-03 23:27:51,036 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:27:51,036 - __main__ - INFO - ======================================================================
+2025-11-03 23:27:51,150 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:27:51,152 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:28:03,424 - src.utils.session_manager - INFO - Sesión guardada para: admin (recordar: True)
+2025-11-03 23:28:03,424 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: admin
+2025-11-03 23:28:03,593 - src.ui.login_window - INFO - Login exitoso para: admin
+2025-11-03 23:28:03,593 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:28:29,812 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:28:29,814 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:28:29,814 - src.utils.session_manager - INFO - PIN actualizado
+2025-11-03 23:28:29,816 - src.controllers.auth_controller - INFO - PIN configurado para: admin
+2025-11-03 23:28:31,504 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:28:31,504 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:28:34,859 - src.database.sync_manager - INFO - Iniciando sincronización hacia SQL Server...
+2025-11-03 23:28:50,751 - src.database.sqlserver_manager - ERROR - Error al conectar con SQL Server: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.\r\n (10061) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (10061)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-11-03 23:28:50,762 - src.database.sync_manager - ERROR - Error al sincronizar con servidor: No se pudo conectar a SQL Server
+2025-11-03 23:28:50,764 - src.database.sync_manager - INFO - Iniciando sincronización desde SQL Server...
+2025-11-03 23:29:12,377 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:29:12,377 - __main__ - INFO - ======================================================================
+2025-11-03 23:29:12,377 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:29:12,377 - __main__ - INFO - ======================================================================
+2025-11-03 23:29:12,479 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:29:12,484 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:29:12,485 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:29:13,768 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:29:13,769 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:29:15,035 - src.ui.main_window - INFO - Cerrando sesión: admin
+2025-11-03 23:29:15,037 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:29:15,143 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:29:15,143 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:29:15,149 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:29:15,400 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:29:15,400 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:29:16,360 - src.ui.main_window - INFO - Cerrando sesión: admin
+2025-11-03 23:29:16,363 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:29:16,467 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:29:16,468 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:29:16,469 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:29:16,708 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:29:16,708 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:29:20,316 - src.ui.main_window - INFO - Cerrando sesión: admin
+2025-11-03 23:29:20,316 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:29:20,424 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:29:20,425 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:29:20,426 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:29:20,685 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:29:20,685 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:29:21,540 - src.ui.main_window - INFO - Cerrando sesión: admin
+2025-11-03 23:29:21,540 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:29:21,637 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:29:21,638 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:29:21,639 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:29:21,846 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:29:21,846 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:29:28,588 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-03 23:29:28,592 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 23:29:28,592 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 23:29:29,619 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-03 23:29:29,621 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-03 23:29:29,621 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-03 23:29:31,508 - src.ui.main_window - INFO - Cerrando sesión: admin
+2025-11-03 23:29:31,510 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:29:31,648 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:29:31,655 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:29:31,655 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:29:31,894 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:29:31,894 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:29:32,340 - src.ui.main_window - INFO - Cerrando sesión: admin
+2025-11-03 23:29:32,340 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:29:32,434 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:29:32,434 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:29:32,434 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:29:32,652 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:29:32,652 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:29:32,984 - src.ui.main_window - INFO - Cerrando sesión: admin
+2025-11-03 23:29:32,984 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:29:33,101 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:29:33,101 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:29:33,103 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:29:33,301 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:29:33,301 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:29:36,382 - src.ui.main_window - INFO - Cerrando sesión: admin
+2025-11-03 23:29:36,382 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:29:36,502 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:29:36,503 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:29:36,504 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:29:36,714 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:29:36,715 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:29:38,344 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:29:38,344 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:29:38,404 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:31:15,636 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:31:15,637 - __main__ - INFO - ======================================================================
+2025-11-03 23:31:15,637 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:31:15,637 - __main__ - INFO - ======================================================================
+2025-11-03 23:31:15,760 - src.utils.session_manager - INFO - Sesión cargada: admin
+2025-11-03 23:31:15,762 - src.controllers.auth_controller - INFO - Auto-login exitoso: admin
+2025-11-03 23:31:15,762 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-03 23:31:17,067 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-03 23:31:17,067 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: admin
+2025-11-03 23:31:18,371 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-03 23:31:18,371 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-03 23:31:18,434 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-03 23:31:25,022 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:31:25,022 - __main__ - INFO - ======================================================================
+2025-11-03 23:31:25,022 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:31:25,022 - __main__ - INFO - ======================================================================
+2025-11-03 23:31:25,163 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:31:25,163 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:31:54,592 - src.controllers.auth_controller - ERROR - Error durante registro: (sqlite3.IntegrityError) UNIQUE constraint failed: usuarios.email
+[SQL: INSERT INTO usuarios (nombre, email, password_hash, es_admin, activo, fecha_creacion, fecha_actualizacion) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('Yerson Jhodemir Fustamante Olivares', 'yeyo@sistema.local', '$2b$12$RPnxqYW9cpU.bpY2iCrjK.cizX/wowMtMdk3HK8938MJce5KOKS4m', 0, 1, '2025-11-03 23:31:54.592153', '2025-11-03 23:31:54.592153')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-11-03 23:37:04,291 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-03 23:37:04,291 - __main__ - INFO - ======================================================================
+2025-11-03 23:37:04,291 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-03 23:37:04,291 - __main__ - INFO - ======================================================================
+2025-11-03 23:37:04,428 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:37:04,428 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-03 23:37:23,275 - src.controllers.auth_controller - ERROR - Error durante registro: (sqlite3.IntegrityError) UNIQUE constraint failed: usuarios.email
+[SQL: INSERT INTO usuarios (nombre, email, password_hash, es_admin, activo, fecha_creacion, fecha_actualizacion) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('yerson', 'yeyo@sistema.local', '$2b$12$1ZTz3NuXDQNEk.fMKM50N.uS7QvSlUTLd9cEpLeSlHm/wNVdRzZA6', 0, 1, '2025-11-03 23:37:23.275889', '2025-11-03 23:37:23.275889')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-11-03 23:37:54,745 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-04 10:29:22,005 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-04 10:29:22,036 - __main__ - INFO - ======================================================================
+2025-11-04 10:29:22,036 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-04 10:29:22,036 - __main__ - INFO - ======================================================================
+2025-11-04 10:29:23,529 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-04 10:29:23,531 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-04 10:30:10,707 - src.controllers.auth_controller - INFO - Usuario registrado exitosamente: jajjaja
+2025-11-04 10:30:10,714 - src.ui.login_window - INFO - Nuevo usuario registrado: jajjaja
+2025-11-04 10:30:47,588 - src.utils.session_manager - INFO - Sesión guardada para: yerson (recordar: True)
+2025-11-04 10:30:47,588 - src.controllers.auth_controller - INFO - Usuario autenticado exitosamente: yerson
+2025-11-04 10:30:47,588 - src.ui.login_window - INFO - Login exitoso para: yerson
+2025-11-04 10:30:47,602 - src.utils.session_manager - INFO - Sesión cargada: yerson
+2025-11-04 10:30:57,047 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-04 10:30:57,048 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: yerson
+2025-11-04 10:31:00,094 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-04 10:31:00,094 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-04 10:31:00,100 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-04 10:31:25,189 - src.controllers.student_controller - INFO - Clase de ejemplo creada: ID 1
+2025-11-04 10:31:25,247 - src.controllers.student_controller - INFO - Estudiante creado: yeyo jaja (ID: 1)
+2025-11-04 10:31:25,274 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-04 10:31:25,282 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-04 10:31:35,897 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 1
+2025-11-04 10:31:35,897 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-04 10:31:35,911 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-04 10:31:39,771 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-04 10:31:39,771 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-04 10:31:39,856 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 13:56:46,028 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 13:56:46,061 - __main__ - INFO - ======================================================================
+2025-11-05 13:56:46,061 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 13:56:46,061 - __main__ - INFO - ======================================================================
+2025-11-05 13:56:47,550 - src.utils.session_manager - INFO - Sesión cargada: yerson
+2025-11-05 13:56:47,582 - src.controllers.auth_controller - INFO - Auto-login exitoso: yerson
+2025-11-05 13:56:47,582 - src.ui.login_window - INFO - Auto-login exitoso
+2025-11-05 13:56:51,779 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-05 13:56:51,779 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: yerson
+2025-11-05 13:56:55,147 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-05 13:56:55,147 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-05 13:56:55,147 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-05 13:56:58,449 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-05 13:56:58,449 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-05 13:56:58,449 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-05 13:57:06,002 - src.database.sync_manager - INFO - Iniciando sincronización hacia SQL Server...
+2025-11-05 13:57:37,718 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 13:57:37,718 - __main__ - INFO - ======================================================================
+2025-11-05 13:57:37,718 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 13:57:37,718 - __main__ - INFO - ======================================================================
+2025-11-05 13:57:37,932 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 13:57:37,933 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 13:58:37,826 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 14:23:12,583 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 14:23:12,583 - __main__ - INFO - ======================================================================
+2025-11-05 14:23:12,583 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 14:23:12,584 - __main__ - INFO - ======================================================================
+2025-11-05 14:23:13,781 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:23:13,783 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:24:45,195 - src.controllers.auth_controller - INFO - Usuario registrado: elYeyo
+2025-11-05 14:25:40,113 - src.controllers.auth_controller - INFO - Usuario registrado: yeyo
+2025-11-05 14:26:24,936 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 14:26:36,693 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 14:26:36,693 - __main__ - INFO - ======================================================================
+2025-11-05 14:26:36,693 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 14:26:36,693 - __main__ - INFO - ======================================================================
+2025-11-05 14:26:36,832 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:26:36,834 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:32:00,573 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 14:40:44,861 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 14:40:44,861 - __main__ - INFO - ======================================================================
+2025-11-05 14:40:44,861 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 14:40:44,861 - __main__ - INFO - ======================================================================
+2025-11-05 14:40:44,997 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:40:44,999 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:41:22,097 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 14:42:04,369 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 14:42:04,369 - __main__ - INFO - ======================================================================
+2025-11-05 14:42:04,369 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 14:42:04,370 - __main__ - INFO - ======================================================================
+2025-11-05 14:42:04,502 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:42:04,502 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:46:14,072 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 14:46:17,438 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 14:46:17,442 - __main__ - INFO - ======================================================================
+2025-11-05 14:46:17,442 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 14:46:17,442 - __main__ - INFO - ======================================================================
+2025-11-05 14:46:17,617 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:46:17,749 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:48:20,066 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 14:50:40,960 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 14:50:40,960 - __main__ - INFO - ======================================================================
+2025-11-05 14:50:40,960 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 14:50:40,960 - __main__ - INFO - ======================================================================
+2025-11-05 14:50:41,118 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:50:41,118 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:50:48,302 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 14:51:46,512 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 14:51:46,512 - __main__ - INFO - ======================================================================
+2025-11-05 14:51:46,512 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 14:51:46,512 - __main__ - INFO - ======================================================================
+2025-11-05 14:51:46,663 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:51:46,663 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:51:51,784 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 14:51:59,799 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 14:51:59,799 - __main__ - INFO - ======================================================================
+2025-11-05 14:51:59,799 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 14:51:59,799 - __main__ - INFO - ======================================================================
+2025-11-05 14:51:59,952 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:51:59,954 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:52:05,741 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 14:52:16,082 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 14:52:16,082 - __main__ - INFO - ======================================================================
+2025-11-05 14:52:16,082 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 14:52:16,082 - __main__ - INFO - ======================================================================
+2025-11-05 14:52:16,214 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:52:16,214 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:52:25,719 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 14:55:10,522 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 14:55:10,522 - __main__ - INFO - ======================================================================
+2025-11-05 14:55:10,522 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 14:55:10,522 - __main__ - INFO - ======================================================================
+2025-11-05 14:55:10,666 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:55:10,668 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:55:19,906 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 14:57:10,383 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 14:57:10,383 - __main__ - INFO - ======================================================================
+2025-11-05 14:57:10,383 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 14:57:10,383 - __main__ - INFO - ======================================================================
+2025-11-05 14:57:10,543 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:57:10,543 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:57:22,194 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 14:57:36,546 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 14:57:36,546 - __main__ - INFO - ======================================================================
+2025-11-05 14:57:36,546 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 14:57:36,562 - __main__ - INFO - ======================================================================
+2025-11-05 14:57:36,694 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:57:36,694 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 14:58:09,897 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 15:04:35,015 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 15:04:35,015 - __main__ - INFO - ======================================================================
+2025-11-05 15:04:35,015 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 15:04:35,015 - __main__ - INFO - ======================================================================
+2025-11-05 15:04:35,405 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 15:04:35,406 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 15:04:57,955 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-05 15:05:35,800 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-05 15:05:35,800 - __main__ - INFO - ======================================================================
+2025-11-05 15:05:35,800 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-05 15:05:35,800 - __main__ - INFO - ======================================================================
+2025-11-05 15:05:36,255 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 15:05:36,257 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-05 15:06:12,041 - __main__ - INFO - Aplicación cerrada correctamente

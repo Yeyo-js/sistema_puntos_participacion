@@ -20,15 +20,24 @@ class MainWindow(ctk.CTk):
         
         # Configuración de la ventana
         self.title(f"{APP_NAME} v{APP_VERSION}")
-        self.geometry(WINDOW_SIZE)
         self.minsize(*MIN_WINDOW_SIZE)
+
+        # Abrir en 90% de la pantalla CENTRADA
+        screen_width = self.winfo_screenwidth()
+        screen_height = self.winfo_screenheight()
+        window_width = int(screen_width * 0.9)
+        window_height = int(screen_height * 0.9)
+
+        # Calcular posición centrada
+        x = (screen_width - window_width) // 2
+        y = (screen_height - window_height) // 2
+
+        # Aplicar geometría centrada
+        self.geometry(f"{window_width}x{window_height}+{x}+{y}")
         
         # Configurar tema
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme(UI_THEME)
-        
-        # Centrar ventana
-        self.center_window()
         
         # Variables de estado
         self.current_view = None

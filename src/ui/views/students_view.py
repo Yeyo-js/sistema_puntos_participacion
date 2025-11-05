@@ -6,6 +6,9 @@ import customtkinter as ctk
 from src.controllers.student_controller import StudentController
 from src.config.settings import COLORS
 import logging
+from src.controllers.import_controller import ImportController
+from tkinter import filedialog
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -76,6 +79,16 @@ class StudentsView(ctk.CTkFrame):
             fg_color=COLORS["success"]
         )
         self.btn_add.pack(side="left", padx=5)
+
+        self.btn_import = ctk.CTkButton(
+            buttons_frame,
+            text="📥 Importar Excel",
+            width=150,
+            height=35,
+            command=self.show_import_dialog,
+            fg_color=COLORS["info"]
+        )
+        self.btn_import.pack(side="left", padx=5)
         
         self.btn_edit = ctk.CTkButton(
             buttons_frame,
@@ -271,6 +284,15 @@ class StudentsView(ctk.CTkFrame):
         
         if dialog.success:
             self.load_students()
+
+    def show_import_dialog(self):
+        """Mostrar diálogo de importación"""
+        dialog = ImportDialog(self, controller=self.controller)
+        dialog.grab_set()
+        self.wait_window(dialog)
+        
+        if dialog.imported:
+            self.load_students()
     
     def show_edit_dialog(self):
         """Mostrar diálogo para editar estudiante"""
@@ -347,6 +369,492 @@ class StudentsView(ctk.CTkFrame):
         
         # Ocultar después de 3 segundos
         self.after(3000, msg_label.destroy)
+
+class ImportDialog(ctk.CTkToplevel):
+    """Diálogo para importar estudiantes desde Excel"""
+    
+    def __init__(self, parent, controller):
+        super().__init__(parent)
+        
+        self.controller = controller
+        self.import_controller = ImportController()
+        self.imported = False
+        self.file_path = None
+        self.preview_data = None
+        
+        # Configuración
+        self.title("Importar Estudiantes desde Excel")
+        self.geometry("800x600")  # ← AUMENTADO
+        self.resizable(True, True)  # ← Permitir redimensionar
+        
+        self.create_widgets()
+        self.center_window()
+    
+    def center_window(self):
+        """Centrar ventana"""
+        self.update_idletasks()
+        width = self.winfo_width()
+        height = self.winfo_height()
+        x = (self.winfo_screenwidth() // 2) - (width // 2)
+        y = (self.winfo_screenheight() // 2) - (height // 2)
+        self.geometry(f'{width}x{height}+{x}+{y}')
+    
+    def create_widgets(self):
+        """Crear widgets del diálogo"""
+        
+        main_frame = ctk.CTkFrame(self)
+        main_frame.pack(fill="both", expand=True, padx=20, pady=20)
+        
+        # Título
+        title = ctk.CTkLabel(
+            main_frame,
+            text="📥 Importar Estudiantes desde Excel",
+            font=ctk.CTkFont(size=20, weight="bold"),
+            text_color=COLORS["primary"]
+        )
+        title.pack(pady=(0, 15))
+        
+        # Instrucciones (MÁS COMPACTAS)
+        instructions_frame = ctk.CTkFrame(main_frame, fg_color="gray90")
+        instructions_frame.pack(fill="x", pady=(0, 15))
+        
+        instructions = ctk.CTkLabel(
+            instructions_frame,
+            text="📋 El Excel debe tener: columna 'numero' (1,2,3...) y columna 'nombre' (nombre completo)",
+            font=ctk.CTkFont(size=11),
+            justify="left",
+            text_color="gray20"
+        )
+        instructions.pack(pady=10, padx=15)
+        
+        # Botones de acción superior
+        top_buttons_frame = ctk.CTkFrame(main_frame, fg_color="transparent")
+        top_buttons_frame.pack(fill="x", pady=(0, 10))
+        
+        # Botón descargar plantilla
+        download_template_btn = ctk.CTkButton(
+            top_buttons_frame,
+            text="📄 Descargar Plantilla",
+            width=180,
+            height=35,
+            command=self.download_template,
+            fg_color=COLORS["success"]
+        )
+        download_template_btn.pack(side="left", padx=5)
+        
+        # Botón seleccionar archivo
+        select_file_btn = ctk.CTkButton(
+            top_buttons_frame,
+            text="📁 Seleccionar Excel",
+            width=180,
+            height=35,
+            command=self.select_file,
+            fg_color=COLORS["info"]
+        )
+        select_file_btn.pack(side="left", padx=5)
+        
+        # Label de archivo seleccionado
+        self.file_label = ctk.CTkLabel(
+            main_frame,
+            text="Ningún archivo seleccionado",
+            font=ctk.CTkFont(size=11),
+            text_color="gray"
+        )
+        self.file_label.pack(pady=8)
+        
+        # Frame de preview (MÁS PEQUEÑO)
+        preview_frame = ctk.CTkFrame(main_frame)
+        preview_frame.pack(fill="both", expand=True, pady=(5, 10))
+        
+        preview_title = ctk.CTkLabel(
+            preview_frame,
+            text="Vista Previa",
+            font=ctk.CTkFont(size=13, weight="bold")
+        )
+        preview_title.pack(pady=8)
+        
+        # Scrollable frame para preview (ALTURA FIJA)
+        self.preview_scroll = ctk.CTkScrollableFrame(
+            preview_frame,
+            fg_color="white",
+            height=280  # ← ALTURA FIJA
+        )
+        self.preview_scroll.pack(fill="both", expand=True, padx=10, pady=(0, 10))
+        
+        # Mensaje inicial
+        self.preview_message = ctk.CTkLabel(
+            self.preview_scroll,
+            text="📋 Selecciona un archivo Excel para ver la vista previa",
+            font=ctk.CTkFont(size=12),
+            text_color="gray50"
+        )
+        self.preview_message.pack(pady=50)
+        
+        # Mensaje de estado
+        self.status_label = ctk.CTkLabel(
+            main_frame,
+            text="",
+            font=ctk.CTkFont(size=11)
+        )
+        self.status_label.pack(pady=8)
+        
+        # Botones inferiores (SIEMPRE VISIBLES)
+        bottom_buttons_frame = ctk.CTkFrame(main_frame, fg_color="transparent")
+        bottom_buttons_frame.pack(fill="x", pady=(5, 0))
+        
+        cancel_btn = ctk.CTkButton(
+            bottom_buttons_frame,
+            text="Cancelar",
+            width=200,
+            height=40,
+            command=self.destroy,
+            fg_color="gray60",
+            hover_color="gray40"
+        )
+        cancel_btn.pack(side="left", padx=5)
+        
+        self.import_btn = ctk.CTkButton(
+            bottom_buttons_frame,
+            text="✅ Importar Estudiantes",
+            width=200,
+            height=40,
+            command=self.import_students,
+            fg_color=COLORS["success"],
+            state="disabled"
+        )
+        self.import_btn.pack(side="right", padx=5)
+    
+    def download_template(self):
+        """Descargar plantilla de Excel"""
+        try:
+            # Pedir ubicación de guardado
+            file_path = filedialog.asksaveasfilename(
+                defaultextension=".xlsx",
+                filetypes=[("Excel files", "*.xlsx")],
+                initialfile="plantilla_estudiantes.xlsx"
+            )
+            
+            if file_path:
+                # Crear plantilla
+                success = self.import_controller.create_template_excel(file_path)
+                
+                if success:
+                    self.status_label.configure(
+                        text=f"✅ Plantilla descargada: {os.path.basename(file_path)}",
+                        text_color=COLORS["success"]
+                    )
+                    logger.info(f"Plantilla descargada en: {file_path}")
+                else:
+                    self.status_label.configure(
+                        text="❌ Error al crear plantilla",
+                        text_color=COLORS["danger"]
+                    )
+        except Exception as e:
+            self.status_label.configure(
+                text=f"❌ Error: {str(e)}",
+                text_color=COLORS["danger"]
+            )
+            logger.error(f"Error al descargar plantilla: {e}")
+    
+    def select_file(self):
+        """Seleccionar archivo Excel"""
+        try:
+            file_path = filedialog.askopenfilename(
+                title="Seleccionar archivo Excel",
+                filetypes=[
+                    ("Excel files", "*.xlsx *.xls *.xlsm"),
+                    ("All files", "*.*")
+                ]
+            )
+            
+            if file_path:
+                self.file_path = file_path
+                self.file_label.configure(
+                    text=f"📁 {os.path.basename(file_path)}",
+                    text_color=COLORS["primary"]
+                )
+                
+                # Validar archivo
+                self.validate_and_preview()
+        
+        except Exception as e:
+            self.status_label.configure(
+                text=f"❌ Error al seleccionar archivo: {str(e)}",
+                text_color=COLORS["danger"]
+            )
+            logger.error(f"Error al seleccionar archivo: {e}")
+    
+    def validate_and_preview(self):
+        """Validar archivo y mostrar preview"""
+        try:
+            # Limpiar preview anterior
+            for widget in self.preview_scroll.winfo_children():
+                widget.destroy()
+            
+            # Validar archivo
+            valid, message, df = self.import_controller.validate_excel_file(self.file_path)
+            
+            if not valid:
+                self.status_label.configure(
+                    text=f"❌ {message}",
+                    text_color=COLORS["danger"]
+                )
+                self.import_btn.configure(state="disabled")
+                
+                error_label = ctk.CTkLabel(
+                    self.preview_scroll,
+                    text=f"❌ Error:\n{message}",
+                    font=ctk.CTkFont(size=12),
+                    text_color=COLORS["danger"]
+                )
+                error_label.pack(pady=50)
+                return
+            
+            # Archivo válido - mostrar preview
+            self.preview_data = df
+            self.status_label.configure(
+                text=f"✅ {message}",
+                text_color=COLORS["success"]
+            )
+            self.import_btn.configure(state="normal")
+            
+            # Crear tabla de preview
+            self.create_preview_table(df)
+            
+        except Exception as e:
+            self.status_label.configure(
+                text=f"❌ Error: {str(e)}",
+                text_color=COLORS["danger"]
+            )
+            logger.error(f"Error al validar archivo: {e}")
+    
+    def create_preview_table(self, df):
+        """Crear tabla de preview con MEJOR CONTRASTE"""
+        # Headers
+        headers_frame = ctk.CTkFrame(self.preview_scroll, fg_color=COLORS["primary"])
+        headers_frame.pack(fill="x", pady=5, padx=5)
+        
+        header_numero = ctk.CTkLabel(
+            headers_frame,
+            text="N°",
+            font=ctk.CTkFont(size=12, weight="bold"),
+            text_color="white",
+            width=80
+        )
+        header_numero.pack(side="left", padx=5, pady=8)
+        
+        header_nombre = ctk.CTkLabel(
+            headers_frame,
+            text="Nombre Completo",
+            font=ctk.CTkFont(size=12, weight="bold"),
+            text_color="white",
+            width=600
+        )
+        header_nombre.pack(side="left", padx=5, pady=8)
+        
+        # Filas (máximo 15 para preview)
+        max_rows = min(15, len(df))
+        
+        for i in range(max_rows):
+            row = df.iloc[i]
+            
+            # Alternar colores para mejor legibilidad
+            bg_color = "gray95" if i % 2 == 0 else "white"
+            
+            row_frame = ctk.CTkFrame(
+                self.preview_scroll,
+                fg_color=bg_color,
+                border_width=1,
+                border_color="gray80"
+            )
+            row_frame.pack(fill="x", pady=1, padx=5)
+            
+            numero_label = ctk.CTkLabel(
+                row_frame,
+                text=str(row['numero']),
+                font=ctk.CTkFont(size=11, weight="bold"),
+                width=80,
+                text_color=COLORS["primary"]
+            )
+            numero_label.pack(side="left", padx=5, pady=6)
+            
+            nombre_label = ctk.CTkLabel(
+                row_frame,
+                text=row['nombre'],
+                font=ctk.CTkFont(size=11),
+                width=600,
+                anchor="w",
+                text_color="gray10"  # ← TEXTO OSCURO
+            )
+            nombre_label.pack(side="left", padx=5, pady=6)
+        
+        # Mensaje si hay más filas
+        if len(df) > max_rows:
+            more_label = ctk.CTkLabel(
+                self.preview_scroll,
+                text=f"... y {len(df) - max_rows} estudiantes más",
+                font=ctk.CTkFont(size=11),
+                text_color="gray40"
+            )
+            more_label.pack(pady=10)
+    
+    def import_students(self):
+        """Importar estudiantes"""
+        if self.preview_data is None:
+            return
+        
+        try:
+            # Deshabilitar botón
+            self.import_btn.configure(state="disabled", text="Importando...")
+            self.update()
+            
+            # Importar
+            resultados = self.import_controller.import_students(
+                self.preview_data,
+                self.controller
+            )
+            
+            # Mostrar resultados
+            self.show_import_results(resultados)
+            
+        except Exception as e:
+            self.status_label.configure(
+                text=f"❌ Error durante importación: {str(e)}",
+                text_color=COLORS["danger"]
+            )
+            self.import_btn.configure(state="normal", text="✅ Importar Estudiantes")
+            logger.error(f"Error durante importación: {e}")
+    
+    def show_import_results(self, resultados):
+        """Mostrar resultados de importación"""
+        # Crear diálogo de resultados
+        results_dialog = ImportResultsDialog(self, resultados)
+        results_dialog.grab_set()
+        self.wait_window(results_dialog)
+        
+        # Si hubo importaciones exitosas, marcar como importado
+        if resultados['exitosos'] > 0:
+            self.imported = True
+        
+        # Cerrar diálogo
+        self.destroy()
+
+
+class ImportResultsDialog(ctk.CTkToplevel):
+    """Diálogo para mostrar resultados de importación"""
+    
+    def __init__(self, parent, resultados):
+        super().__init__(parent)
+        
+        self.resultados = resultados
+        
+        # Configuración
+        self.title("Resultados de Importación")
+        self.geometry("700x500")
+        self.resizable(True, True)
+        
+        self.create_widgets()
+        self.center_window()
+    
+    def center_window(self):
+        """Centrar ventana"""
+        self.update_idletasks()
+        width = self.winfo_width()
+        height = self.winfo_height()
+        x = (self.winfo_screenwidth() // 2) - (width // 2)
+        y = (self.winfo_screenheight() // 2) - (height // 2)
+        self.geometry(f'{width}x{height}+{x}+{y}')
+    
+    def create_widgets(self):
+        """Crear widgets"""
+        main_frame = ctk.CTkFrame(self)
+        main_frame.pack(fill="both", expand=True, padx=20, pady=20)
+        
+        # Título
+        title = ctk.CTkLabel(
+            main_frame,
+            text="📊 Resultados de Importación",
+            font=ctk.CTkFont(size=20, weight="bold"),
+            text_color=COLORS["primary"]
+        )
+        title.pack(pady=(0, 20))
+        
+        # Resumen
+        summary_frame = ctk.CTkFrame(main_frame, fg_color=COLORS["light"])
+        summary_frame.pack(fill="x", pady=(0, 20))
+        
+        summary_text = (
+            f"📋 Total de registros: {self.resultados['total']}\n"
+            f"✅ Importados exitosamente: {self.resultados['exitosos']}\n"
+            f"⚠️ Duplicados (ignorados): {self.resultados['duplicados']}\n"
+            f"❌ Errores: {self.resultados['errores']}"
+        )
+        
+        summary_label = ctk.CTkLabel(
+            summary_frame,
+            text=summary_text,
+            font=ctk.CTkFont(size=14),
+            justify="left"
+        )
+        summary_label.pack(pady=15, padx=15)
+        
+        # Detalles
+        if self.resultados['detalles']:
+            details_label = ctk.CTkLabel(
+                main_frame,
+                text="Detalles:",
+                font=ctk.CTkFont(size=14, weight="bold")
+            )
+            details_label.pack(anchor="w", pady=(0, 10))
+            
+            details_scroll = ctk.CTkScrollableFrame(main_frame)
+            details_scroll.pack(fill="both", expand=True)
+            
+            for detalle in self.resultados['detalles']:
+                self.create_detail_row(details_scroll, detalle)
+        
+        # Botón cerrar
+        close_btn = ctk.CTkButton(
+            main_frame,
+            text="Cerrar",
+            width=200,
+            height=40,
+            command=self.destroy,
+            fg_color=COLORS["primary"]
+        )
+        close_btn.pack(pady=(20, 0))
+    
+    def create_detail_row(self, parent, detalle):
+        """Crear fila de detalle"""
+        # Color según estado
+        if detalle['estado'] == 'exitoso':
+            color = COLORS["success"]
+            icon = "✅"
+        elif detalle['estado'] == 'duplicado':
+            color = COLORS["warning"]
+            icon = "⚠️"
+        else:
+            color = COLORS["danger"]
+            icon = "❌"
+        
+        row_frame = ctk.CTkFrame(
+            parent,
+            fg_color="white",
+            border_width=1,
+            border_color="gray85"
+        )
+        row_frame.pack(fill="x", pady=2, padx=5)
+        
+        info_text = f"{icon} N°{detalle['numero']} - {detalle['nombre']}: {detalle['mensaje']}"
+        
+        info_label = ctk.CTkLabel(
+            row_frame,
+            text=info_text,
+            font=ctk.CTkFont(size=11),
+            text_color=color,
+            anchor="w"
+        )
+        info_label.pack(fill="x", padx=10, pady=8)
 
 
 class StudentFormDialog(ctk.CTkToplevel):
