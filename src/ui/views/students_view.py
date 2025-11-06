@@ -3,12 +3,13 @@ Vista de Gestión de Estudiantes
 Interfaz completa para el CRUD de estudiantes
 """
 import customtkinter as ctk
-from src.controllers.student_controller import StudentController
 from src.config.settings import COLORS
 import logging
+from src.presentation.controllers.student_controller_v2 import student_controller_v2
 from src.controllers.import_controller import ImportController
 from tkinter import filedialog
 import os
+from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
@@ -18,7 +19,8 @@ class StudentsView(ctk.CTkFrame):
     def __init__(self, parent):
         super().__init__(parent, fg_color="gray95")
         
-        self.controller = StudentController()
+        # usar controller v2
+        self.controller = student_controller_v2
         self.selected_student_id = None
         
         self.create_widgets()
@@ -156,8 +158,22 @@ class StudentsView(ctk.CTkFrame):
         for widget in self.students_scroll.winfo_children():
             widget.destroy()
         
-        # Obtener estudiantes
-        students = self.controller.get_all_students()
+        # ✅ Obtener estudiantes con Result
+        result = self.controller.get_all_students()
+        
+        if result.is_failure:
+            # Mostrar error
+            error_label = ctk.CTkLabel(
+                self.students_scroll,
+                text=f"❌ Error: {result.message}",
+                font=ctk.CTkFont(size=14),
+                text_color=COLORS["danger"]
+            )
+            error_label.pack(pady=50)
+            logger.error(f"Error al cargar estudiantes: {result.message}")
+            return
+        
+        students = result.data  # ✅ Obtener lista del Result
         
         if not students:
             # Mensaje si no hay estudiantes
@@ -259,8 +275,20 @@ class StudentsView(ctk.CTkFrame):
             self.load_students()
             return
         
-        # Buscar
-        students = self.controller.search_students(search_term)
+        # ✅ Buscar con Result
+        result = self.controller.search_students(search_term)
+        
+        if result.is_failure:
+            error_label = ctk.CTkLabel(
+                self.students_scroll,
+                text=f"❌ Error: {result.message}",
+                font=ctk.CTkFont(size=14),
+                text_color=COLORS["danger"]
+            )
+            error_label.pack(pady=50)
+            return
+        
+        students = result.data  # ✅ Obtener lista del Result
         
         if not students:
             no_results = ctk.CTkLabel(
@@ -338,13 +366,14 @@ class StudentsView(ctk.CTkFrame):
         self.wait_window(dialog)
         
         if dialog.confirmed:
+            # ✅ Usar Result
             result = self.controller.delete_student(student['id'])
             
-            if result['success']:
+            if result.is_success:
                 self.show_message("Estudiante eliminado exitosamente", "success")
                 self.load_students()
             else:
-                self.show_message(result['message'], "error")
+                self.show_message(result.message, "error")
     
     def delete_student(self):
         """Eliminar estudiante seleccionado"""
@@ -991,14 +1020,10 @@ class StudentFormDialog(ctk.CTkToplevel):
             self.error_label.configure(text="⚠️ El número de lista debe ser un número")
             return
         
-        if list_number < 1:
-            self.error_label.configure(text="⚠️ El número de lista debe ser mayor a 0")
-            return
-        
         # Crear o actualizar sección de ejemplo si no existe
         section_id = self.controller.create_sample_section()
         
-        # Guardar
+        # ✅ Guardar con Result
         if self.mode == "add":
             result = self.controller.create_student(full_name, list_number, section_id)
         else:
@@ -1008,11 +1033,11 @@ class StudentFormDialog(ctk.CTkToplevel):
                 list_number=list_number
             )
         
-        if result['success']:
+        if result.is_success:
             self.success = True
             self.destroy()
         else:
-            self.error_label.configure(text=f"⚠️ {result['message']}")
+            self.error_label.configure(text=f"⚠️ {result.message}")
 
 
 class ConfirmDialog(ctk.CTkToplevel):

@@ -10,7 +10,7 @@ ROOT_DIR = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT_DIR))
 
 from src.utils.logger import setup_logging
-from src.controllers.auth_controller import auth_controller
+from src.presentation.controllers.auth_controller_v2 import auth_controller_v2
 from src.ui.login_window import LoginWindow
 import logging
 
@@ -26,8 +26,8 @@ def main():
         logger.info("Iniciando Sistema de Participación Estudiantil")
         logger.info("=" * 70)
         
-        # Crear usuario admin por defecto si no existe
-        auth_controller.create_default_admin()
+        # usar auth_controller_v2
+        auth_controller_v2.create_default_admin()
         
         # Iniciar ventana de login
         app = LoginWindow()

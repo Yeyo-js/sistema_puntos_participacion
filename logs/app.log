@@ -1195,3 +1195,165 @@
 2025-11-05 15:05:36,255 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
 2025-11-05 15:05:36,257 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
 2025-11-05 15:06:12,041 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-06 09:32:49,784 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-06 09:32:49,815 - __main__ - INFO - ======================================================================
+2025-11-06 09:32:49,815 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-06 09:32:49,815 - __main__ - INFO - ======================================================================
+2025-11-06 09:32:51,206 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-06 09:32:51,209 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-06 09:33:11,631 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-06 09:47:03,951 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-06 09:47:03,951 - __main__ - INFO - ======================================================================
+2025-11-06 09:47:03,951 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-06 09:47:03,951 - __main__ - INFO - ======================================================================
+2025-11-06 09:47:03,951 - __main__ - CRITICAL - Error crítico en la aplicación: name 'auth_controller' is not defined
+Traceback (most recent call last):
+  File "D:\DEV\INVESTIGACION\sistema-participacion\src\main.py", line 31, in main
+    auth_controller.create_default_admin()
+    ^^^^^^^^^^^^^^^
+NameError: name 'auth_controller' is not defined
+2025-11-06 09:49:39,883 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-06 09:49:39,883 - __main__ - INFO - ======================================================================
+2025-11-06 09:49:39,883 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-06 09:49:39,883 - __main__ - INFO - ======================================================================
+2025-11-06 09:49:39,883 - __main__ - CRITICAL - Error crítico en la aplicación: name 'auth_controller' is not defined
+Traceback (most recent call last):
+  File "D:\DEV\INVESTIGACION\sistema-participacion\src\main.py", line 31, in main
+    auth_controller.create_default_admin()
+    ^^^^^^^^^^^^^^^
+NameError: name 'auth_controller' is not defined
+2025-11-06 09:50:15,375 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-06 09:50:15,375 - __main__ - INFO - ======================================================================
+2025-11-06 09:50:15,375 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-06 09:50:15,375 - __main__ - INFO - ======================================================================
+2025-11-06 09:50:15,375 - __main__ - CRITICAL - Error crítico en la aplicación: name 'auth_controller' is not defined
+Traceback (most recent call last):
+  File "D:\DEV\INVESTIGACION\sistema-participacion\src\main.py", line 31, in main
+    auth_controller.create_default_admin()
+    ^^^^^^^^^^^^^^^
+NameError: name 'auth_controller' is not defined
+2025-11-06 09:57:10,590 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-06 09:57:10,590 - __main__ - INFO - ======================================================================
+2025-11-06 09:57:10,590 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-06 09:57:10,590 - __main__ - INFO - ======================================================================
+2025-11-06 09:57:10,706 - __main__ - CRITICAL - Error crítico en la aplicación: name 'auth_controller' is not defined
+Traceback (most recent call last):
+  File "D:\DEV\INVESTIGACION\sistema-participacion\src\main.py", line 33, in main
+    app = LoginWindow()
+          ^^^^^^^^^^^^^
+  File "D:\DEV\INVESTIGACION\sistema-participacion\src\ui\login_window.py", line 36, in __init__
+    if self.try_auto_login():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DEV\INVESTIGACION\sistema-participacion\src\ui\login_window.py", line 56, in try_auto_login
+    success, usuario, mensaje = auth_controller.auto_login()
+                                ^^^^^^^^^^^^^^^
+NameError: name 'auth_controller' is not defined
+2025-11-06 10:07:34,693 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-06 10:07:34,693 - __main__ - INFO - ======================================================================
+2025-11-06 10:07:34,693 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-06 10:07:34,693 - __main__ - INFO - ======================================================================
+2025-11-06 10:07:34,805 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-06 10:07:34,805 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-06 10:09:52,893 - src.core.services.auth_service - INFO - Usuario registrado: yeyopro
+2025-11-06 10:09:52,912 - src.ui.login_window - INFO - Nuevo usuario: yeyopro
+2025-11-06 10:10:10,323 - src.core.services.auth_service - INFO - Login exitoso: yeyopro
+2025-11-06 10:10:10,323 - src.ui.login_window - INFO - Login exitoso: yeyopro
+2025-11-06 10:10:15,364 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-06 10:10:15,366 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: yeyopro
+2025-11-06 10:10:19,175 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-06 10:10:19,175 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-06 10:10:19,175 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-06 10:10:37,591 - src.controllers.student_controller - INFO - Estudiante creado: yeyo gracia (ID: 2)
+2025-11-06 10:10:37,617 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-06 10:10:37,635 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-06 10:10:44,443 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 2
+2025-11-06 10:10:44,445 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-06 10:10:44,452 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-06 10:10:46,461 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-06 10:10:46,461 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-06 10:10:46,513 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-06 10:21:24,478 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-06 10:21:24,478 - __main__ - INFO - ======================================================================
+2025-11-06 10:21:24,478 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-06 10:21:24,478 - __main__ - INFO - ======================================================================
+2025-11-06 10:21:24,605 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-06 10:21:24,605 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-06 10:21:42,299 - src.core.services.auth_service - INFO - Login exitoso: yeyopro
+2025-11-06 10:21:42,301 - src.ui.login_window - INFO - Login exitoso: yeyopro
+2025-11-06 10:21:43,068 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-06 10:21:43,068 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: yeyopro
+2025-11-06 10:21:45,838 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-06 10:21:45,838 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-06 10:21:45,838 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-06 10:21:50,073 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-06 10:21:50,073 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-06 10:21:50,073 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-06 10:22:00,724 - src.controllers.student_controller - INFO - Estudiante creado: yeyo gracia (ID: 3)
+2025-11-06 10:22:00,744 - src.controllers.student_controller - INFO - Se obtuvieron 1 estudiantes
+2025-11-06 10:22:00,758 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-06 10:22:06,882 - src.controllers.student_controller - INFO - Estudiante eliminado: ID 3
+2025-11-06 10:22:06,897 - src.controllers.student_controller - INFO - Se obtuvieron 0 estudiantes
+2025-11-06 10:22:06,899 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-06 10:22:08,604 - src.ui.main_window - INFO - Cerrando aplicación...
+2025-11-06 10:22:08,604 - src.database.sync_manager - INFO - Sincronización automática detenida
+2025-11-06 10:22:08,657 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-06 10:31:21,465 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-06 10:31:21,465 - __main__ - INFO - ======================================================================
+2025-11-06 10:31:21,465 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-06 10:31:21,465 - __main__ - INFO - ======================================================================
+2025-11-06 10:31:21,576 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-06 10:31:21,576 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-06 10:31:33,516 - src.core.services.auth_service - INFO - Login exitoso: yeyopro
+2025-11-06 10:31:33,516 - src.ui.login_window - INFO - Login exitoso: yeyopro
+2025-11-06 10:31:34,055 - __main__ - INFO - Aplicación cerrada correctamente
+2025-11-06 10:36:18,365 - root - INFO - Sistema de logging iniciado correctamente
+2025-11-06 10:36:18,365 - __main__ - INFO - ======================================================================
+2025-11-06 10:36:18,365 - __main__ - INFO - Iniciando Sistema de Participación Estudiantil
+2025-11-06 10:36:18,365 - __main__ - INFO - ======================================================================
+2025-11-06 10:36:18,476 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-06 10:36:18,476 - src.utils.session_manager - ERROR - Error al cargar sesión: Expecting value: line 1 column 1 (char 0)
+2025-11-06 10:36:31,701 - src.core.services.auth_service - INFO - Login exitoso: yeyopro
+2025-11-06 10:36:31,701 - src.ui.login_window - INFO - Login exitoso: yeyopro
+2025-11-06 10:36:32,423 - src.database.sync_manager - INFO - Sincronización automática deshabilitada
+2025-11-06 10:36:32,429 - src.ui.main_window - INFO - Ventana principal iniciada para usuario: yeyopro
+2025-11-06 10:36:37,552 - src.core.services.student_service - INFO - Se obtuvieron 0 estudiantes
+2025-11-06 10:36:37,567 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-06 10:36:37,567 - src.ui.main_window - INFO - Vista Estudiantes cargada
+2025-11-06 10:36:54,862 - src.core.services.student_service - INFO - Estudiante creado: yeyo gracia (ID: 4)
+2025-11-06 10:36:54,879 - src.core.services.student_service - INFO - Se obtuvieron 1 estudiantes
+2025-11-06 10:36:54,893 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-06 10:37:18,699 - src.core.services.student_service - INFO - Búsqueda 'y': 1 resultados
+2025-11-06 10:37:19,402 - src.core.services.student_service - INFO - Se obtuvieron 1 estudiantes
+2025-11-06 10:37:19,411 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-06 10:37:19,745 - src.core.services.student_service - INFO - Búsqueda 'f': 0 resultados
+2025-11-06 10:37:20,022 - src.core.services.student_service - INFO - Búsqueda 'fd': 0 resultados
+2025-11-06 10:37:22,849 - src.core.services.student_service - INFO - Búsqueda 'f': 0 resultados
+2025-11-06 10:37:23,015 - src.core.services.student_service - INFO - Se obtuvieron 1 estudiantes
+2025-11-06 10:37:23,040 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-06 10:37:23,181 - src.core.services.student_service - INFO - Se obtuvieron 1 estudiantes
+2025-11-06 10:37:23,198 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-06 10:37:23,331 - src.core.services.student_service - INFO - Se obtuvieron 1 estudiantes
+2025-11-06 10:37:23,331 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-06 10:37:31,029 - src.core.services.student_service - INFO - Estudiante actualizado: ID 4
+2025-11-06 10:37:31,050 - src.core.services.student_service - INFO - Se obtuvieron 1 estudiantes
+2025-11-06 10:37:31,079 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 1 registros
+2025-11-06 10:37:57,199 - src.controllers.import_controller - INFO - Archivo validado: 10 registros encontrados
+2025-11-06 10:38:07,665 - src.controllers.import_controller - ERROR - Error durante importación: 'Result' object is not subscriptable
+2025-11-06 10:38:26,048 - src.controllers.import_controller - INFO - Archivo validado: 10 registros encontrados
+2025-11-06 10:38:37,078 - src.controllers.import_controller - ERROR - Error durante importación: 'Result' object is not subscriptable
+2025-11-06 10:38:45,378 - src.core.services.student_service - INFO - Estudiante eliminado: ID 4
+2025-11-06 10:38:45,396 - src.core.services.student_service - INFO - Se obtuvieron 0 estudiantes
+2025-11-06 10:38:45,398 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 0 registros
+2025-11-06 10:38:52,357 - src.controllers.import_controller - INFO - Archivo validado: 10 registros encontrados
+2025-11-06 10:38:56,028 - src.core.services.student_service - INFO - Estudiante creado: Juan Pérez García (ID: 5)
+2025-11-06 10:38:56,028 - src.controllers.import_controller - ERROR - Error durante importación: 'Result' object is not subscriptable
+2025-11-06 10:39:25,076 - src.core.services.student_service - INFO - Estudiante creado: lfjdaslfa sdfa (ID: 6)
+2025-11-06 10:39:25,106 - src.core.services.student_service - INFO - Se obtuvieron 2 estudiantes
+2025-11-06 10:39:25,120 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 2 registros
+2025-11-06 10:39:36,097 - src.core.services.student_service - INFO - Estudiante creado: fasdfa  daf (ID: 7)
+2025-11-06 10:39:36,133 - src.core.services.student_service - INFO - Se obtuvieron 3 estudiantes
+2025-11-06 10:39:36,161 - src.ui.views.students_view - INFO - Tabla de estudiantes cargada: 3 registros
+2025-11-06 10:40:08,957 - src.controllers.import_controller - INFO - Plantilla Excel creada: C:/Users/fusta/Downloads/plantilla de estudiantes.xlsx
+2025-11-06 10:40:08,959 - src.ui.views.students_view - INFO - Plantilla descargada en: C:/Users/fusta/Downloads/plantilla de estudiantes.xlsx
+2025-11-06 10:41:15,611 - src.controllers.import_controller - INFO - Plantilla Excel creada: C:/Users/fusta/Downloads/purba estudiantes.xlsx
+2025-11-06 10:41:15,616 - src.ui.views.students_view - INFO - Plantilla descargada en: C:/Users/fusta/Downloads/purba estudiantes.xlsx

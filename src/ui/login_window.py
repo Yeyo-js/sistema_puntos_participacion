@@ -3,109 +3,15 @@ Ventana de Login MEJORADA - VERSIÓN FINAL PERFECTA
 Con botón mostrar contraseña DENTRO del input y sin mensajes de texto
 """
 import customtkinter as ctk
-from src.controllers.auth_controller import auth_controller
+from src.presentation.controllers.auth_controller_v2 import auth_controller_v2
+from src.presentation.ui.components.password_entry import PasswordEntry
 from src.config.settings import APP_NAME, UI_THEME, COLORS
 from src.utils.session_manager import session_manager
 from src.utils.error_dialogs import show_error, show_success, show_warning
+from src.core.validators.auth_validator import AuthValidator
 import logging
 
 logger = logging.getLogger(__name__)
-
-
-class PasswordEntry(ctk.CTkFrame):
-    """Entry personalizado para contraseña con botón mostrar/ocultar integrado"""
-    
-    def __init__(self, parent, placeholder_text="Contraseña", width=400, **kwargs):
-        super().__init__(parent, fg_color="transparent", **kwargs)
-        
-        self.password_visible = False
-        
-        # Frame que simula un input (con borde)
-        self.entry_frame = ctk.CTkFrame(
-            self,
-            fg_color=("#F9F9FA", "#343638"),
-            border_color=("#979DA2", "#565B5E"),
-            border_width=2,
-            corner_radius=8,
-            width=width,
-            height=40
-        )
-        self.entry_frame.pack(fill="both", expand=True)
-        self.entry_frame.pack_propagate(False)
-        
-        # Entry sin borde (dentro del frame)
-        self.entry = ctk.CTkEntry(
-            self.entry_frame,
-            placeholder_text=placeholder_text,
-            show="*",
-            width=width-50,
-            height=40,  # ← CAMBIO: de 36 a 40 (altura completa)
-            border_width=0,
-            fg_color="transparent",
-            font=ctk.CTkFont(size=14)
-        )
-        self.entry.place(x=8, y=0)  # ← CAMBIO: usar place en vez de pack
-        
-        # Botón mostrar/ocultar (dentro del frame) - CENTRADO ABSOLUTO
-        self.toggle_btn = ctk.CTkButton(
-            self.entry_frame,
-            text="👁️",
-            width=40,  # ← CAMBIO: de 30 a 40
-            height=40,  # ← CAMBIO: altura completa
-            command=self.toggle_visibility,
-            fg_color="transparent",
-            hover_color=("gray85", "gray25"),
-            corner_radius=6,
-            font=ctk.CTkFont(size=18)  # ← CAMBIO: de 16 a 18
-        )
-        self.toggle_btn.place(x=width-45, y=0)  # ← CAMBIO: usar place para posición exacta
-    
-    def toggle_visibility(self):
-        """Alternar visibilidad de contraseña"""
-        if self.password_visible:
-            self.entry.configure(show="*")
-            self.toggle_btn.configure(text="👁️")
-            self.password_visible = False
-        else:
-            self.entry.configure(show="")
-            self.toggle_btn.configure(text="🙈")
-            self.password_visible = True
-    
-    def get(self):
-        """Obtener texto del entry"""
-        return self.entry.get()
-    
-    def focus(self):
-        """Dar foco al entry"""
-        self.entry.focus()
-    
-    def bind(self, *args, **kwargs):
-        """Pasar bind al entry interno"""
-        return self.entry.bind(*args, **kwargs)
-    
-    def toggle_visibility(self):
-        """Alternar visibilidad de contraseña"""
-        if self.password_visible:
-            self.entry.configure(show="*")
-            self.toggle_btn.configure(text="👁️")
-            self.password_visible = False
-        else:
-            self.entry.configure(show="")
-            self.toggle_btn.configure(text="🙈")
-            self.password_visible = True
-    
-    def get(self):
-        """Obtener texto del entry"""
-        return self.entry.get()
-    
-    def focus(self):
-        """Dar foco al entry"""
-        self.entry.focus()
-    
-    def bind(self, *args, **kwargs):
-        """Pasar bind al entry interno"""
-        return self.entry.bind(*args, **kwargs)
-
 
 class LoginWindow(ctk.CTk):
     """Ventana de inicio de sesión mejorada"""
@@ -148,14 +54,32 @@ class LoginWindow(ctk.CTk):
     
     def try_auto_login(self):
         """Intentar auto-login con sesión guardada"""
-        success, usuario, mensaje = auth_controller.auto_login()
+        # ✅ Cargar sesión y hacer login automático
+        session_data = session_manager.load_session()
         
-        if success:
+        if not session_data:
+            return False
+        
+        username = session_data['username']
+        
+        # Buscar usuario directamente en BD
+        from src.database.sqlite_manager import sqlite_manager
+        from src.database.models import Usuario
+        
+        session = sqlite_manager.get_session()
+        usuario = session.query(Usuario).filter(
+            (Usuario.nombre == username) | (Usuario.email == username)
+        ).first()
+        sqlite_manager.close_session(session)
+        
+        if usuario and usuario.activo:
             logger.info("Auto-login exitoso")
             self.usuario_autenticado = usuario
             self.after(100, self.open_main_window)
             return True
         
+        # Si no funciona, limpiar sesión
+        session_manager.clear_session()
         return False
     
     def create_pin_login(self):
@@ -365,48 +289,89 @@ class LoginWindow(ctk.CTk):
         self.pin_login_button.configure(state="disabled", text="Verificando...")
         self.update()
         
-        success, usuario, mensaje = auth_controller.login_with_pin(pin)
+        # ✅ Verificar PIN
+        from src.core.validators.auth_validator import AuthValidator
         
-        if success:
-            self.usuario_autenticado = usuario
-            logger.info(f"Login con PIN exitoso")
-            self.after(500, self.open_main_window)
-        else:
-            mensaje_limpio = mensaje.replace("❌ ", "")
-            show_error(self, mensaje_limpio, "Error de Autenticación")
+        validation_result = AuthValidator.validate_pin(pin)
+        if validation_result.is_failure:
+            show_error(self, validation_result.message, "PIN Inválido")
+            self.pin_entry.configure(state="normal")
+            self.pin_entry.delete(0, 'end')
+            self.pin_login_button.configure(state="normal", text="Ingresar")
+            return
+        
+        # ✅ Obtener sesión guardada
+        session_data = session_manager.load_session()
+        
+        if not session_data or not session_data.get('pin'):
+            show_error(self, "No hay PIN configurado", "Error")
+            self.pin_entry.configure(state="normal")
+            self.pin_login_button.configure(state="normal", text="Ingresar")
+            return
+        
+        # ✅ Verificar que el PIN coincida
+        if pin != session_data['pin']:
+            show_error(self, "PIN incorrecto", "Error de Autenticación")
             self.pin_entry.configure(state="normal")
             self.pin_entry.delete(0, 'end')
             self.pin_login_button.configure(state="normal", text="Ingresar")
             self.pin_entry.focus()
+            return
+        
+        # ✅ PIN correcto - buscar usuario
+        username = session_data['username']
+        
+        from src.database.sqlite_manager import sqlite_manager
+        from src.database.models import Usuario
+        
+        session = sqlite_manager.get_session()
+        usuario = session.query(Usuario).filter(
+            (Usuario.nombre == username) | (Usuario.email == username)
+        ).first()
+        sqlite_manager.close_session(session)
+        
+        if usuario and usuario.activo:
+            self.usuario_autenticado = usuario
+            logger.info("Login con PIN exitoso")
+            self.after(500, self.open_main_window)
+        else:
+            show_error(self, "Usuario no encontrado o inactivo", "Error")
+            self.pin_entry.configure(state="normal")
+            self.pin_login_button.configure(state="normal", text="Ingresar")
     
     def handle_login(self):
-        """Manejar el evento de login"""
         username = self.username_entry.get().strip()
         password = self.password_field.get()
         remember_me = self.remember_var.get()
         
         if not username or not password:
-            show_warning(self, "Por favor ingresa tu usuario y contraseña para continuar.", "Campos Vacíos")
+            show_warning(self, "Por favor ingresa tu usuario y contraseña", "Campos Vacíos")
             return
         
         self.login_button.configure(state="disabled", text="Iniciando sesión...")
         self.update()
         
-        success, usuario, mensaje = auth_controller.login(username, password, remember_me)
+        # ✅ Usar controller v2
+        result = auth_controller_v2.login(username, password)
         
-        if success:
-            self.usuario_autenticado = usuario
-            logger.info(f"Login exitoso para: {username}")
+        if result.is_success:
+            self.usuario_autenticado = result.data
+            logger.info(f"Login exitoso: {username}")
+            
+            # Guardar sesión si recordarme está marcado
+            if remember_me:
+                token = session_manager.generate_token()
+                session_manager.save_session(username, token, remember_me=True)
             
             if remember_me and not session_manager.has_pin():
                 self.after(100, self.offer_pin_setup)
             else:
                 self.after(100, self.open_main_window)
         else:
-            mensaje_limpio = mensaje.replace("❌ ", "").replace("⏳ ", "").replace("🚫 ", "").replace("⚠️ ", "")
+            mensaje_limpio = result.message.replace("❌ ", "").replace("⏳ ", "")
             
-            if "bloqueado" in mensaje.lower() or "espera" in mensaje.lower():
-                show_warning(self, mensaje_limpio, "Cuenta Bloqueada Temporalmente")
+            if result.error_code == "USER_BLOCKED":
+                show_warning(self, mensaje_limpio, "Cuenta Bloqueada")
             else:
                 show_error(self, mensaje_limpio, "Error de Autenticación")
             
@@ -549,35 +514,37 @@ class PinSetupDialog(ctk.CTkToplevel):
             self.pin_confirm_entry.delete(len(pin2)-1, 'end')
     
     def save_pin(self):
-        """Guardar PIN"""
         pin = self.pin_entry.get()
         pin_confirm = self.pin_confirm_entry.get()
         
         if len(pin) != 4:
-            show_warning(self, "El PIN debe tener exactamente 4 dígitos", "PIN Inválido")
+            show_warning(self, "El PIN debe tener 4 dígitos", "PIN Inválido")
             return
         
         if pin != pin_confirm:
-            show_error(self, "Los PINs no coinciden. Por favor verifica e intenta de nuevo.", "Error de Validación")
+            show_error(self, "Los PINs no coinciden", "Error de Validación")
             return
         
-        valid, mensaje = auth_controller.validate_pin(pin)
-        if not valid:
-            show_error(self, mensaje.replace("❌ ", ""), "PIN Débil")
+        # ✅ Validar con AuthValidator
+        validation_result = AuthValidator.validate_pin(pin)
+        if validation_result.is_failure:
+            show_error(self, validation_result.message, "PIN Débil")
             return
         
         session_data = session_manager.load_session()
         if not session_data:
-            show_error(self, "No se pudo guardar el PIN. Intenta iniciar sesión de nuevo.", "Error del Sistema")
+            show_error(self, "No se pudo guardar el PIN", "Error del Sistema")
             return
         
-        success, msg = auth_controller.setup_pin(session_data['username'], pin)
+        # ✅ Guardar PIN
+        success = session_manager.update_pin(pin)
         
         if success:
-            show_success(self, "Tu PIN ha sido configurado exitosamente", "PIN Configurado")
+            show_success(self, "PIN configurado exitosamente", "PIN Configurado")
+            logger.info(f"PIN configurado para: {session_data['username']}")
             self.after(1000, self.destroy)
         else:
-            show_error(self, msg.replace("❌ ", ""), "Error al Guardar PIN")
+            show_error(self, "Error al guardar el PIN", "Error al Guardar PIN")
 
 
 class RegisterWindow(ctk.CTkToplevel):
@@ -685,30 +652,22 @@ class RegisterWindow(ctk.CTkToplevel):
         cancel_button.pack(pady=10)
     
     def handle_register(self):
-        """Manejar registro"""
         nombre = self.nombre_entry.get().strip()
         username = self.username_entry.get().strip()
         password = self.password_field.get()
         confirm_password = self.confirm_password_field.get()
         
-        if not nombre or not username or not password or not confirm_password:
-            show_error(self, "Por favor complete todos los campos", "Campos Incompletos")
-            return
-        
-        if password != confirm_password:
-            show_error(self, "Las contraseñas no coinciden. Por favor verifica e intenta de nuevo.", "Error de Validación")
-            return
-        
         self.register_button.configure(state="disabled", text="Registrando...")
         self.update()
         
-        success, mensaje = auth_controller.register(nombre, username, password)
+        # ✅ Usar controller v2
+        result = auth_controller_v2.register(nombre, username, password, confirm_password)
         
-        if success:
-            show_success(self, mensaje.replace("✅ ", ""), "Registro Exitoso")
-            logger.info(f"Nuevo usuario registrado: {username}")
+        if result.is_success:
+            show_success(self, "Usuario registrado exitosamente", "Registro Exitoso")
+            logger.info(f"Nuevo usuario: {username}")
             self.after(500, self.destroy)
         else:
-            mensaje_limpio = mensaje.replace("❌ ", "")
+            mensaje_limpio = result.message.replace("❌ ", "")
             show_error(self, mensaje_limpio, "Error de Registro")
             self.register_button.configure(state="normal", text="Registrarse")
